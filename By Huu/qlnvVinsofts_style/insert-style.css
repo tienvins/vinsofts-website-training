@@ -1,0 +1,100 @@
+header img {
+	height: 200px;
+}
+body {
+	margin: 0px auto;
+	text-align: center;
+	
+}
+#index {
+
+}
+#left {
+	min-height: 500px;
+	width: 20%;
+	background-color: #d5d2f0;
+	float: left;
+}
+#center {
+	min-height: 500px;
+	width: 60%;
+	float: left;
+	background-image: url('../logos-qlnv/teal-fur-texture.jpg');
+	background-repeat: repeat;
+}
+#right {
+	min-height: 500px;
+	width: 20%;
+	background-color: #d5d2f0;
+	float: left;
+}
+#tittle {
+	background-color: #f8ebeb;
+	text-align: center;
+	font-family: Tahoma;
+	text-transform: uppercase;
+	line-height: 75px;
+	margin-top: 5px;
+	font-weight: bold;
+	font-size: 40px;
+    letter-spacing: 6px;
+    color: #087868;
+}
+fieldset {
+	background-color: #469f4a;
+	border: 1px solid;
+	border-radius: 8px;
+	margin: auto;
+	padding: 30px;
+	width: 722px;
+}
+legend {
+	font-size: 48px;
+	color: #0b0302;
+	font-style: italic;
+	
+}
+form input[type="text"], input[type="email"], input[type="number"], input[type="date"] {
+	width: 300px;
+	background-color: #eeeeee;
+	font-style: italic;
+	padding: 10px;
+	border: 1px solid #eeeeee;
+	margin-left: 66px;
+}
+form input[type="submit"] {
+	background-color: #efedde;
+	border: none;
+	cursor: pointer;
+	line-height: 30px;
+	text-align: center;
+	font-family: Tahoma;
+	font-weight: bold;
+	letter-spacing: 2px;
+}
+#submit {
+	text-align: center;
+	padding: 10px;
+}
+label {
+	font-style: italic;
+	font-size: 17px;
+	margin-left: 20px;
+	color: #fbf1f2;
+}
+.error {
+	color: #880000;
+	font-size: 13px;
+	font-style: italic;
+}
+.error_msg {
+	background: #c1edeb;
+	border: 1px solid gray;
+	color: #f8350b;
+	font-style: italic;
+}
+.error_msg li {
+	list-style: none;
+	background: url('../logos-qlnv/error_add.png') no-repeat;
+	padding: 3px 363px 11px 4px;
+}
