@@ -1,0 +1,95 @@
+.content{
+	width: 960px;
+	margin: auto;
+}
+/*--[Header]--*/
+.header-logo{
+	width: 30%;
+	float: left;
+}
+.header-logo img{
+	padding-left: 75px;
+}
+.header-right{
+	width: 70%;
+	float: left;
+}
+.menu-sidebar{
+	float: right;
+	clear: both;
+}
+.menu-sidebar li{
+	display: inline-block;
+}
+.menu-sidebar a{
+	padding: 0px 9px;
+}
+.contact-item {
+	float: right;
+	padding-top: 20px;
+	padding-right: 15px;
+}
+.contact-item img{
+	float: left;
+}
+/*Content body 1 */
+.description{
+	text-align: center;
+	padding-top: 30px;
+}
+.posts-content{
+	padding-top: 30px;
+}
+.item{
+	text-align: center;
+
+}
+.item-title{
+	padding-top: 15px;
+}
+.item-text{
+	padding-top: 10px;
+	height: 90px;
+}
+.item-more{
+	padding-top: 30px;
+}
+.item-more a{
+	background: #00a2ed;
+	padding: 10px 10px;
+	color: #ffffff;
+	border-radius: 9px;
+}
+/*content body 2*/
+
+.item-2{
+	width: 20%;
+	float: left;
+	text-align: center;
+	padding-top: 45px;
+
+}
+/*content body 3*/
+.posts-content-3{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.item-thumbnail-3 img{
+	width: 100%;
+}
+/*footer */
+
+.footer-about{
+	width: 25%
+	float: left;
+}
+.footer-contact-us{
+	width: 35%
+	float:left;
+}
+.footer-info{
+	width: 40%%
+	float:left;
+}
+
+
