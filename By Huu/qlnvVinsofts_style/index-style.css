@@ -1,0 +1,80 @@
+header img {
+    height: 200px;
+}
+body {
+    margin: 0px auto;
+    text-align: center;
+    background: #a4a482;
+}
+header input[type="submit"] {
+    position: relative;
+    float: right;
+    top: 2px;
+    left: 163px;
+    background: #f5dc57;
+    border: none;
+    line-height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+}    
+header input[type="text"] {
+    position: relative;
+    float: right;
+    bottom: 32px;
+    right: 14px;
+    width: 200px;
+    background: #f9e88f;
+    border: 1px solid #75736b;
+    padding: 5px;
+    font-style: italic;
+} 
+#tittle {
+	background-color: #f8ebeb;
+    text-align: center;
+    font-family: Tahoma;
+    text-transform: uppercase;
+    line-height: 75px;
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 40px;
+    letter-spacing: 6px;
+    color: #087868;
+    clear: both;
+	}
+table {
+       width: 100%;
+    }
+table, th, td {
+    border: 1px solid #ffffff;
+    border-collapse: collapse;
+    background: #b2d7b0;
+}
+th, td {
+    	padding: 15px;
+    }
+a {
+    	text-decoration: none;
+    } 
+.field {
+        background-color: #8ede89;
+    }  
+.button {
+    position: relative;
+    float: left;
+    left: 36px;
+    background: #f5dc57;
+    border: none;
+    line-height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 3px;
+    }
+    .result_msg {
+    background: #c1edeb url('../logos-qlnv/tick-1.ico') no-repeat 80px;
+    border: 1px solid gray;
+    color: #f8350b;
+    font-style: italic;
+    padding: 23px 852px 27px 21px;
+    font-size: 19px
+    }
