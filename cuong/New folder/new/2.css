@@ -1,0 +1,78 @@
+body{ font-family:  myriad Pro;
+		background: #ffffff;}
+#all{width:960px;
+	height: 1790px;
+	margin: 0 auto;
+	border: 1px solid black;
+	background: #ffffff;}
+#header{width:960px;}
+#header{height: 86px;}
+.logo img{margin-left: 78px;
+		margin-top: 8px; }
+.slogan{margin-left: 78px;}
+.slogan p{font-size: 8.88pt;
+			font-family: myriad Pro ;
+			
+
+			}
+.all1{display: inline-flex;}
+.menu {margin-left: 120px;}	 	
+.menu ul li {float: left;
+				list-style: none;
+				padding:  5px 20px 5px 20px;
+				border-radius: 5px;
+				text-align: center;}	
+.menu ul li a{
+				text-decoration: none;
+				font-family: myriad Pro;
+				font-size: 8.88pt;
+				color: #939393;
+				font-weight: bold;}	
+.menu ul li:hover{background: #00a2ed;}	
+.menu ul li a:hover{color: #ffffff;}
+.image img{position: relative;
+			height: 299px;}	
+.textin {position: absolute;
+		top: 310px;
+		right:260px;
+		}	
+.textin span{font-size: 22.86pt;
+			color: #ffffff;
+			left: 10px;}
+.textin p{color: #ffffff;}
+.textip {text-align: center;
+	color: #838383;
+
+}
+.textip p{font-size: 29.3pt;
+			padding: 10px;
+			height: 2px;}
+.textip span{font-size: 10pt;}	
+.anh{width: 960px;
+	height: 328px;
+	display: inline-flex;
+	text-align: center;
+}
+.anh1{height: 33%;
+	width: 300px;
+float: left;}
+.anh2{height: 33%;
+	width: 300px;
+	float: left;
+
+
+}
+.anh3{height: 33%;
+	width: 300px;
+	float: right;
+}				
+.anh p{font-size: 14.86pt;
+		font-weight: bold;}
+.anh span{font-size: 11.86pt;}
+button{background: blue;
+		color: #ffffff;}
+hr{width: 300px;}	
+.picture{width: 
+	display: inline-table;}	
+																 		
+							
