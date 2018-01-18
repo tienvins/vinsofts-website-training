@@ -2,18 +2,33 @@
 	margin: 0;
 	padding: 0;
 }
-.navbar-default .navbar-nav>li>a{
-	font-family: Myriad Pro;
-	font-size: 10px;
-	color: #9a9a9a;
+
+#app{
+	font-weight: bold;
+	color: #626262;
 }
-.navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover{
-	color: #fff;
+.btn-primary{
 	background-color: #00a2ed;
-	border-radius: 20px;
-	width: 70px;
-	height: 20px;
 }
-..navbar-nav>li>a{
-	padding-top: 40px;
+.menu-anh {
+	margin-top: 40px;
+}
+.menu-anh ul {
+	list-style: none;
+}
+.menu-anh ul li {
+	float: left;
+	margin-left: 75px;
+}
+#p1{
+	margin-bottom: 5px;
+}
+#a1{
+	color: #626262;
+	font-weight: bold;
+	font-size: 18px;
+}
+#a2{
+	font-size: 10px;
+	margin-top: -10px;
 }
