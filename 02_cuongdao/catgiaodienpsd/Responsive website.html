@@ -1,19 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-			<script src="https://www.w3schools.com/lib/w3.js"></script>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<script src="bootstrap/js/jquery-3.2.1.min.js"></script>
+		<script src="bootstrap/js/bootstrap.js"></script>
+		<script src="https://www.w3schools.com/lib/w3.js"></script>
+		<style type="text/css">
+		body{font-family: myriad Pro;
+margin:20px auto;
+background: #f6f6f6;
+}
+
+#header{background: #ffffff;
+}
+
+#menutitle a{font-size: 9.86pt;}
+#menutitle ul li{float: left;
+					margin:12px;
+					list-style: none;}
+#menutitle ul li a{text-decoration: none;
+					margin-left: 5px;
+					color: #939393;}
+#menu {margin-left: 440px;
+		margin-top: -12px;}	 	
+#menu ul li {float: left;
+				list-style: none;
+				padding:  5px 10px 5px 10px;
+				border-radius: 5px;
+				text-align: center;}	
+#menu ul li a{
+				text-decoration: none;
+				font-family: myriad Pro;
+				font-size: 8.88pt;
+				color: #939393;
+				font-weight: bold;}	
+#menu ul li:first-child{background:#00a2ed; }
+
+#menu ul li:hover{background: #00a2ed;}	
+#menu ul li a:hover{color: #ffffff;}
+#menu-icon{float:right;
+			width: 10px;}
+#menu-icon ul li{float: right;}			
+
+.image img{
+			height: 299px;}						
+#content{background: #ffffff;
+		height: 1360px;}
+.contain{margin-right: auto;
+		margin-left: auto;
+		width: 1170px;	}			
+#myCarousel img {width: 1170px;
+					height: 400px;
+			position: relative;}
+		.textin {position: absolute;
+		top: 415px;
+		right:200px;
+		
+		}
+		.textin span{font-size: 22.86pt;
+			color: #ffffff;
+			left: 10px;}
+.textin p{color: #ffffff;}
+.textip {text-align: center;
+	color: #838383;
+	margin-top: 10px;
+
+}
+.textip p{font-size: 29.3pt;
+			height: 52px;}
+.textip span{font-size: 10pt;
+				}
+#anh{
+	height: 328px;
+	text-align: center;}
+#anh p{font-size: 14.86pt;
+		font-weight: bold;
+	color: #706972;}	
+	#anh span{font-size: 11.86pt;
+color: #7c767e;}
+	</style>
+
 
 	<link rel="stylesheet" type="text/css" href="style/stylebs.css">
-	<style type="text/css">
-		body{font-family:myriad Pro;margin:20px auto;background:#f6f6f6}#header{background:#ffffff}#menutitle a{font-size:9.86pt}#menutitle ul li{float:left;margin:12px;list-style:none}#menutitle ul li a{text-decoration:none;margin-left:5px;color:#939393}#menu{margin-left:300px;margin-top:-12px}#menu ul li{float:left;list-style:none;padding:5px 10px 5px 10px;border-radius:5px;text-align:center;width:70px}#menu ul li a{text-decoration:none;font-family:myriad Pro;font-size:8.88pt;color:#939393;font-weight:bold}#menu ul li:first-child{background:#00a2ed}#menu ul li:hover{background:#00a2ed}#menu ul li a:hover{color:#ffffff}#menu-icon{float:right;width:10px}#menu-icon ul li{float:right}.image img{height:299px}#content{background:#ffffff;height:1360px} #myCarousel img{width:1170px;height:400px;position:relative}.textin{position:absolute;top:415px;right:200px}.textin span{font-size:22.86pt;color:#ffffff;left:10px}.textin p{color:#ffffff}.textip{text-align:center;color:#838383;margin-top:10px}.textip p{font-size:29.3pt;height:52px}.textip span{font-size:10pt}#anh{height:328px;text-align:center}#anh p{font-size:14.86pt;font-weight:bold;color:#706972}#anh span{font-size:11.86pt;color:#7c767e}
-	</style>
 </head>
 <body>
-	<div id="all">
-		<div id="header" class="container">
+	<div id="header" class="container">
 			<div class="row">
 				<div id="logo" class="col-md-5 col-sm-6 col-xs-12"><img src="image/2.png"></div>
 				<div id="menutitle" class="col-md-7 col-sm-6 col-xs-12">
@@ -28,9 +102,22 @@
 
 			<div class="row">
 					<div id="logo" class="col-md-4 col-sm-6 col-xs-12 "><p>Your success our pride!</p></div>
+<nav class="navbar navbar-default">
 
-				<div class="col-md-8 col-sm-6 ">
-					<ul>
+   <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+
+      </button>
+
+    </div>
+   
+    <div class="collapse navbar-collapse" id="myNavbar">
+   <div id="menu">
+  	<ul>
 					<li><a href="" style="color: white">Home</a></li>
 					<li><a href="">Protfolio</a></li>
 					<li><a href="">Services</a></li>
@@ -43,14 +130,15 @@
 					<li><a href=""><img src="image/icon7.png"></a></li>
 				
 				</ul>
-				</div>
+     </div>
+    </div>
+  </div>
 
-			</div>
 
-		</div>
-		
-		
-		<div id="content" class="container">
+</nav>
+</div>
+</div>
+<div id="content" class="container">
 
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -79,16 +167,18 @@
     <span class="sr-only">Next</span>
   </a>
 
-			</div>
+			</div   >
+			<div class="col-md-4 col-sm-6 col-xs-12">
 			<div class="textin"><span>WEB DESIN COMPANY REPUPATION</span>
 						<p>we've been broughth the most valued products and </p>
 						<p>servecies to our global clients during last 10 year</p></div>
 						
-						
+						</div>
 			<div class ="textip" class="col-md-12 col-sm-12 col-xs-12">
 						<p>OUR SERVICES</p>
 						<span>We Get The Job Done, No Matter The Project </span>
 			</div>
+
 			<div id="anh">
 				<div id="anh1" class="col-md-4 col-sm-6 col-xs-12">
 					<div><img src="image/cut.png"></div>
@@ -109,6 +199,7 @@
 					<div class="buton"><button>Explore more>></button></div>
 				</div>
 			</div>
+
 			<hr>
 			<div id="picture" class="row">
 			
@@ -209,7 +300,7 @@
             <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div><div id='gmap_canvas' style='height:240px;width:300px;'></div><div><small></small></div><div><small><a href=""></a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div><script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(21.02627985516122,105.77979697937623),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(21.02627985516122,105.77979697937623)});infowindow = new google.maps.InfoWindow({content:'<strong>VinSoft</strong><br>36 phạm hùng, từ liêm, hà nội, việt nam<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
           </div>
 			</div>
-			<div class="footer">
+			<div class="footer" class="container" >
 				<span>Ki ốt số 3 Nhà N9, Khu 212, Học Viện Kỹ Thuật Quân Sự, Đường Tân Xuân, Phường Xuân Đỉnh, Quận Bắc Từ Liêm, Hà Nội</span></div> 
 				</div>
 				
@@ -222,5 +313,7 @@
 myShow = w3.slideshow(".mySlides", 6000);
 
 </script>
+</body>
+</html>
 </body>
 </html>
