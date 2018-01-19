@@ -28,10 +28,10 @@ background: #f6f6f6;
 		margin-top: -12px;}	 	
 #menu ul li {float: left;
 				list-style: none;
-				padding:  5px 10px 5px 10px;
+				
 				border-radius: 5px;
 				text-align: center;}	
-#menu ul li a{
+#menu ul li a{padding:  15px 15px 15px 10px;
 				text-decoration: none;
 				font-family: myriad Pro;
 				font-size: 8.88pt;
@@ -40,7 +40,8 @@ background: #f6f6f6;
 #menu ul li:first-child{background:#00a2ed; }
 
 #menu ul li:hover{background: #00a2ed;}	
-#menu ul li a:hover{color: #ffffff;}
+#menu ul li a:hover{color: #ffffff;
+}
 #menu-icon{float:right;
 			width: 10px;}
 #menu-icon ul li{float: right;}			
@@ -89,7 +90,7 @@ color: #7c767e;}
 <body>
 	<div id="header" class="container">
 			<div class="row">
-				<div id="logo" class="col-md-5 col-sm-6 col-xs-12"><img src="image/2.png"></div>
+				<div id="logo" class="col-md-5 col-sm-6 col-xs-12"><a href=""><img src="image/2.png"></a></div>
 				<div id="menutitle" class="col-md-7 col-sm-6 col-xs-12">
 					<ul>
 					<li><img src="image/icon1.png"><a href="">Skype: Vinsofts.com</a></li>
@@ -124,10 +125,10 @@ color: #7c767e;}
 					<li><a href="">Gallery</a></li>
 					<li><a href="">Contact</a></li>
 					<li><a href="">Recruitment</a></li>
-					<li><a href=""><img src="image/icon4.png"></a></li>
-					<li><a href=""><img src="image/icon5.png"></a></li>
-					<li><a href=""><img src="image/icon6.png"></a></li>
-					<li><a href=""><img src="image/icon7.png"></a></li>
+					<a href=""><img src="image/icon4.png"></a>
+					<a href=""><img src="image/icon5.png"></a>
+					<a href=""><img src="image/icon6.png"></a>
+					<a href=""><img src="image/icon7.png"></a>
 				
 				</ul>
      </div>
@@ -138,19 +139,19 @@ color: #7c767e;}
 </nav>
 </div>
 </div>
-<div id="content" class="container">
+<div id="content" class="contain" >
 
 				<div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
 
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
+  <div class="carousel-inner" >
+    <div class="item active" >
       <img src="image/4.png">
     </div>
 
-    <div class="item">
+    <div class="item" id="contain">
       <img src="image/44.png" >
     </div>
 
