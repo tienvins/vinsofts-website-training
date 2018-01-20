@@ -1,15 +1,4 @@
 /* MEDIA CHO MÀN HÌNH MOBIE VÀ IPAD*/
-@media only screen and (min-width: 360px) and (max-width: 750px) {
-  .header-contact{
-    display: none;
-  }
-  .banner{
-    display: none;
-  }
-  .menu-icon{
-    display: none;
-  }
-}
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
  .menu-icon{
   display: none;
@@ -20,8 +9,9 @@
 #narbar-list{
   padding-top: 40px;
 }
-/*ĐÂY LÀ STYLE CONTENT2*/
 }
+/*ĐÂY LÀ STYLE CONTENT2*/
+
 .item-2{
   width: 20%;
   float: left;

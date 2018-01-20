@@ -9,16 +9,17 @@
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" rel="stylesheet">
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
-	<link href="css/myweb.css" rel="stylesheet">
+	<link href="css/web-above.css" rel="stylesheet">
+	<link href="css/web-below.css" rel="stylesheet">
 </head>
 <body>
-	<div class="content" style="max-width:960px; margin:auto; overflow: hidden; font-family:Myriad Pro">
+	<div class="content">
 		<!-- Phần header -->
 		<header>
 			<div class="col-md-3 col-xs-12">
-				<div class="header-logo" style="text-align: center;">
-					<a href=""><img src="images/Vinsofts-Home.jpg" alt="logo" width="95px" height="50px" style="padding-top: 10px;"></a><br>
-					<span style="font-size: 7.5pt">Your success, our pride!</span>
+				<div class="header-logo">
+					<a href=""><img src="images/Vinsofts-Home.jpg" alt="logo" width="95px" height="50px"></a><br>
+					<span>Your success, our pride!</span>
 				</div>  
 			</div>
 			<div class="col-md-9 col-xs-12">
@@ -36,11 +37,11 @@
 						<span>Skype: Vinsofts.com</span>
 					</div>
 				</div>
-				<div class="menu-sidebar" style="clear: both;">
+				<div class="menu-sidebar">
 					<nav class="navbar-default" role="navigation">
-						<div style="background-color: #ffffff;">
+						<div>
 							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse" style="float: left;">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
 									<span class="sr-only">Toggle navigation</span>
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
@@ -48,7 +49,7 @@
 								</button>
 							</div>
 							
-							<div class="collapse navbar-collapse navbar-ex1-collapse" style="float: left;">
+							<div class="collapse navbar-collapse navbar-ex1-collapse">
 								<ul class="nav navbar-nav ">
 									<li><a href="#">Home</a></li>
 									<li><a href="#">Protfolio</a></li>
@@ -58,8 +59,8 @@
 									<li><a href="#">Recruitment</a></li>
 								</ul>
 							</div>
-							<div class="menu-icon" style="float: right; margin-right: 20px; margin-top:5px">
-								<ul style="list-style: none;">
+							<div class="menu-icon">
+								<ul>
 									<li><a href=""><img src="images/icon-facebook.jpg" alt="icon-fb" width="23px" height="23px"></a></li>
 									<li><a href=""><img src="images/icon-tw.jpg" alt="icon-tw" width="22px" height="23px"></a></li>
 									<li><a href=""><img src="images/icon-gg.jpg" alt="icon-gg" width="23px" height="23px"></a></li>
@@ -70,50 +71,13 @@
 					</nav>
 				</div>
 			</div>
-			<style>
-				.menu-icon ul li{
-					float: left;
-					margin-left: 10px;
-				}
-
-				.navbar-default .navbar-nav>li>a {
-					color: #939393;
-					padding: 7px 15px;
-				}
-				.navbar-default .navbar-nav>li>a:hover {
-					border-radius: 10px;
-					background: #00a2ed;
-					color: #ffffff;
-					width: auto;
-					height: 30px;
-				}
-				
-				.navbar-nav a{
-					color: #939393;
-					font-weight: bold;
-				}
-
-				h4{
-					font-weight: bold;
-					color: #939393;
-				}
-				.contact-item {
-					float: right;
-					padding-top: 20px;
-					padding-right: 20px;
-				}
-				.contact-item span{
-					font-size: 12px;
-					color: #939393;
-				}
-			</style>
 		</header>
 		<!-- Hết phần header -->
 
 		<!-- Phần banner -->
 		<div class="row">
 			<div class="banner">
-				<div class="col-md-12" style="position: relative;color: white;">
+				<div class="col-md-12">
 					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner">
 							<div class="item active">
@@ -124,9 +88,9 @@
 							</div>
 						</div>
 					</div>
-					<div class="bottom-right" style="position: absolute; bottom: 15px;right: 60px;">
-						<span style="font-size:23px; font-weight:bold">WEB DESIGN COMPANY REPUPATION</span><br>
-						<span style="font-size:18px">we've been brougth the most valued products and<br>servecles to our global clients during last 10 year</span>
+					<div class="bottom-right">
+						<span id="s1">WEB DESIGN COMPANY REPUPATION</span><br>
+						<span id="s2">we've been brougth the most valued products and<br>servecles to our global clients during last 10 year</span>
 					</div>
 				</div>
 			</div>
@@ -135,11 +99,11 @@
 		
 		<!-- Phần Our Services -->
 		<section>
-			<div style= "color: #838383; text-align: center; padding-top: 30px;">
-				<p style="font-weight: bold; font-size: 27px;">OUR SERVICES</p>
+			<div class="text-services">
+				<p id="p-s-1">OUR SERVICES</p>
 				<p>We Get The Job Done, No Matter The Project</p>
 			</div>
-			<div class="posts-content" style="padding-top: 20px;">
+			<div class="posts-content" style="">
 				<div class="row">
 					<div class="col-md-4 col-xs-12 col-sm-6">
 						<div class="item">
@@ -176,11 +140,11 @@
 				<p class="p3">OUR CLIENTS</p>
 				<p>The Circle Of Live And Deft Continute...</p>
 				<div class="owl-carousel owl-theme">
-					<img src="images/anh-1.jpg" alt="anh-1" width="100%" height="100%">
-					<img src="images/anh-2.jpg" alt="anh-2" width="100%" height="100%">
-					<img src="images/anh-3.jpg" alt="anh-3" width="100%" height="100%">
-					<img src="images/anh-4.jpg" alt="anh-4" width="100%" height="100%">
-					<img src="images/anh-5.jpg" alt="anh-5" width="100%" height="100%">
+					<img src="images/images-1.jpg" alt="anh-1" width="100%" height="100%">
+					<img src="images/images-2.jpg" alt="anh-2" width="100%" height="100%">
+					<img src="images/images-3.jpg" alt="anh-3" width="100%" height="100%">
+					<img src="images/images-4.jpg" alt="anh-4" width="100%" height="100%">
+					<img src="images/images-5.jpg" alt="anh-5" width="100%" height="100%">
 				</div>
 				<script src="js/my.js"></script>
 			</div>
@@ -267,7 +231,7 @@
 							<div class="info">
 								<p class="p2">OUR INFO </p>
 								<div class="thumbnail-footer">	
-									<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div><div id='gmap_canvas' style='height:240px;width:323pxpx;'></div><div><small></small></div><div><small><a href=""></a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+									<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div><div id='gmap_canvas'></div><div><small></small></div><div><small><a href=""></a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
 										<script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(21.02627985516122,105.77979697937623),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(21.02627985516122,105.77979697937623)});infowindow = new google.maps.InfoWindow({content:'<strong>VinSoft</strong><br>36 phạm hùng, từ liêm, hà nội, việt nam<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
 									</script>
 								</div>

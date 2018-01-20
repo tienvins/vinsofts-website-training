@@ -5,8 +5,9 @@
 		width: 115px;
 		height: 25px;
 		font-size: 9.86pt;}
-hr{width: 356px;
-background: red;}
+.hr hr{width: 415px;
+margin-left: 360px;
+}
 .hr{margin-top: 5px;}
 #picture{margin-bottom: 5px;
 			margin-left: 515px;
@@ -48,17 +49,27 @@ td span{color:red;}
 				}
 	#content{height: 1950px;
 			overflow: hidden;}
-	#menu{margin-left:0; }
+	#menu{margin-left:0;
+			}
 	.a a{display: none;}
 	#menu ul li{float: none;
 				padding:  15px 10px 5px 10px;}
+
 
 	#logo{text-align: center;}
 	hr{display: none;}
 	#footer #about{height: 200px;}
 	 }
- @media only screen and (max-width: 900px) and (min-width: 600px){
-  	#myCarousel{display: none;}
+ @media only screen and (max-width: 992px) and (min-width:768px){
+  	#myCarousel{display: none;
+  					}
+@media screen and (max-width: 1024px) and (min-width: 768px){
+	#menu{margin-left: 50px;}
+	.a a{display: none;}
+	#menu ul li {padding:  15px 5px 15px 5px;}
+}	
+@media screen and (max-width: 1366px) and (min-width: 1024px)
+{.a a{display: none;} }		
 
   
 
