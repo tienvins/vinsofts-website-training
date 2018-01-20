@@ -1,6 +1,6 @@
 body{font-family: myriad Pro;
-margin:20px auto;
-background: #f6f6f6;
+		margin:20px auto;
+		background: #f6f6f6;
 }
 *{
     margin:0;
@@ -15,7 +15,7 @@ background: #f6f6f6;
 #menutitle ul li a{text-decoration: none;
 					margin-left: 5px;
 					color: #939393;}
-#menu {margin-left: 440px;
+#menu {margin-left: 485px;
 		margin-top: -12px;}	 	
 #menu ul li {float: left;
 				list-style: none;
