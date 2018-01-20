@@ -39,24 +39,24 @@ td span{color:red;}
 @media only screen and (max-width: 600px) {
 	#menutitle{display: none;}
 	#myCarousel{display: none;}
-	.textin{text-align: left;
+	.textin{text-align: center;
 			height: 100px;}
-	.textip{text-align: left;
+	.textip{text-align: center;
 				font-size: 15px;}
-	#anh{text-align: left;}
-	#footer{height: 1000px;}
-	#content{height: 1620px;}
+	#anh{text-align: center;}
+	#footer{height: 1000px;
+				}
+	#content{height: 1950px;
+			overflow: hidden;}
 	#menu{margin-left:0; }
+	.a a{display: none;}
 	#menu ul li{float: none;
 				padding:  15px 10px 5px 10px;}
 
 	#logo{text-align: center;}
 	hr{display: none;}
 	#footer #about{height: 200px;}
-
-
-
-  }
+	 }
  @media only screen and (max-width: 900px) and (min-width: 600px){
   	#myCarousel{display: none;}
 
