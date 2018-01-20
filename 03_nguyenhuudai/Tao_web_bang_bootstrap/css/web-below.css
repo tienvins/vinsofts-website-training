@@ -1,40 +1,3 @@
-* {
-	margin: 0;
-	padding: 0;
-}
-@media only screen and (min-width: 320px) and (max-width: 750px) {
-    .header-contact{
-        display: none;
-    }
-    .banner{
-        display: none;
-    }
-    .menu-icon{
-      display: none;
-    }
-    .item {
-    	padding-top: 20px;
-    }
-}
-
-/* CSS cho phần OUR Services */
-.item{
-	text-align: center;
-}
-.item-title{
-	padding-top: 15px;
-	color: #706972;
-}
-.item-text{
-	font-size: 14px;
-	padding-top: 10px;
-	height: 90px;
-	color: #838383;
-}
-.btn-primary{
-	background-color: #00a2ed;
-}
-
 .p3{
 	font-weight: bold;
 	border-top: 1px solid #838383;
@@ -49,10 +12,6 @@
 	text-align: center;
 	padding-top: 30px;
 	color: #838383;
-}
-h4{
-    font-weight: bold;
-    color: #939393;
 }
 .thumbnail{
 	    border: 1px solid #ffffff;
@@ -70,7 +29,6 @@ h4{
 .media-carousel .carousel-control.left 
 {
   background-image: none;
-/*   background: none repeat scroll 0 0 #222222; */
   border: 4px solid #FFFFFF;
   border-radius: 23px 23px 23px 23px;
   height: 40px;
@@ -81,7 +39,6 @@ h4{
 .media-carousel .carousel-control.right 
 {
   background-image: none;
-/*   background: none repeat scroll 0 0 #222222; */
   border: 4px solid #FFFFFF;
   border-radius: 23px 23px 23px 23px;
   height: 40px;
@@ -114,15 +71,6 @@ a.thumbnail.active, a.thumbnail:focus, a.thumbnail:hover{
 	border-color: #fff;
 }
 /* End carousel */
-/*content body 3*/
-/* .posts-content-3{
-  padding-top: 30px;
-  padding-bottom: 30px;
-}
-
-.item-3 img{
-  width: 100%;
-} */
 
 /*footer*/
 footer{
@@ -190,4 +138,7 @@ footer{
 .footer-info{
     padding-left: 10px;
     padding-right: 10px;
+}
+#gmap_canvas{
+  height:240px;width:323pxpx;
 }
