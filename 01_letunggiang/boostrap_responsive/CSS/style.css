@@ -1,0 +1,92 @@
+/* MEDIA CHO MÀN HÌNH MOBIE VÀ IPAD*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+ .menu-icon{
+  display: none;
+}
+.header-contact{
+  display: none;
+}
+#narbar-list{
+  padding-top: 40px;
+}
+}
+/*ĐÂY LÀ STYLE CONTENT2*/
+
+.item-2{
+  width: 20%;
+  float: left;
+  text-align: center;
+  padding-top: 45px;
+
+}
+/*ĐÂY LÀ STYLE CONTENT3*/
+.thumbnail p{
+  color: #838383;
+}
+.thumbnail img{
+  width: 100%;
+}
+.posts-content-3{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.item-3 img{
+  width: 100%;
+}
+
+/*ĐÂY LÀ STYLE FOOTER*/
+footer{
+  padding-bottom: 40px;
+  overflow: hidden;
+  background-color: #323232;
+}
+
+.footer p {
+  margin: 0px 0px 1px;
+  padding-top: 10px;
+  color: #ffffff;
+  /*font-family: 'roboto';*/
+}
+.p2 {
+  color: #ffffff;
+  font-size: 20px;
+  border-bottom: 2px solid #404040;
+}
+.footer{
+  padding-top: 40px;
+
+}
+.button {
+  padding-top: 10px;
+}
+
+.ip1{
+  width: 170px;
+}
+.ip2{
+  width: 100px;
+}
+.ip3{
+  width: 274px;
+}
+.ip4{
+  width: 274px;
+  height: 55px;
+}
+
+.thumbnail-footer img{
+  padding-top: 15px;
+}
+.thumbnail-footer{
+  padding-top: 10px;
+}
+.footer-info{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+
+
+

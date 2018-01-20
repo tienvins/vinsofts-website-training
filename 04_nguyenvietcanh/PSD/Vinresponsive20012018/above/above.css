@@ -1,0 +1,16 @@
+.contact-item{
+	padding: 10px 20px;
+}
+
+
+
+.header-logo a img{
+	float: center ;
+	 padding-top: 10px;
+}
+
+.bottom-right{
+	position: absolute;
+	 bottom: 15px;
+	 right: 60px;
+}

@@ -4,251 +4,247 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Vinsofts</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/myweb.css" rel="stylesheet">
-<!--   <script language="javascript" src="js/my.js"></script> -->
-  <script src="js/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/assets/owl.carousel.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.min.js"></script>
+	<link href="css/web-above.css" rel="stylesheet">
+	<link href="css/web-below.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container" style="width: 960px; height: 1790px; margin: auto; font-family:Myriad Pro; color:#9a9a9a;">
-    	<div class="header" style="width: 960px;height: 85px;">
-    		<div class="row">
-			    <div class="col-md-4">
-			    	<div class="logo" style="float: left; margin-left:75px; margin-top:10px; width:95px" >
-						<img src="images/Vinsofts-Home.jpg" alt="logo-vinsofts" width="95px" height="50px">
-						<span style="font-size:9.5px; color:#000">Your success, our pride!</span>
+	<div class="content">
+		<!-- Phần header -->
+		<header>
+			<div class="col-md-3 col-xs-12">
+				<div class="header-logo">
+					<a href=""><img src="images/Vinsofts-Home.jpg" alt="logo" width="95px" height="50px"></a><br>
+					<span>Your success, our pride!</span>
+				</div>  
+			</div>
+			<div class="col-md-9 col-xs-12">
+				<div class="header-contact">
+					<div class="contact-item">
+						<img src="images/dienthoai.jpg" alt="call" width="10px" height="10px">
+						<span>Hotline: 0988 988 988</span>
 					</div>
-			    </div>
-			    <div class="col-md-8">
-			    	<div class="address" style="width:425px; height:15px; float: right; margin-top:20px; margin-right:-15px; font-size: 7.3pt;">
-						<div class="skype" style="width:110px; float:left;">
-							<img src="images/sky.jpg" alt="icon-sky" width="10px" height="10px">
-							<span id="s1">Skype: Vinsofts.com</span>
+					<div class="contact-item">
+						<img src="Images/email.jpg" alt="email">
+						<span>Mail: Contact@vinsofts.com</span>
+					</div>
+					<div class="contact-item">
+						<img src="Images/sky.jpg" alt="sky">
+						<span>Skype: Vinsofts.com</span>
+					</div>
+				</div>
+				<div class="menu-sidebar">
+					<nav class="navbar-default" role="navigation">
+						<div>
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+							</div>
+							
+							<div class="collapse navbar-collapse navbar-ex1-collapse">
+								<ul class="nav navbar-nav ">
+									<li><a href="#">Home</a></li>
+									<li><a href="#">Protfolio</a></li>
+									<li><a href="#">Services</a></li>
+									<li><a href="#">Gallery</a></li>
+									<li><a href="#">Contact</a></li>
+									<li><a href="#">Recruitment</a></li>
+								</ul>
+							</div>
+							<div class="menu-icon">
+								<ul>
+									<li><a href=""><img src="images/icon-facebook.jpg" alt="icon-fb" width="23px" height="23px"></a></li>
+									<li><a href=""><img src="images/icon-tw.jpg" alt="icon-tw" width="22px" height="23px"></a></li>
+									<li><a href=""><img src="images/icon-gg.jpg" alt="icon-gg" width="23px" height="23px"></a></li>
+									<li><a href=""><img src="images/icon-ln.jpg" alt="icon-ln" width="22px" height="23px"></a></li>
+								</ul>				
+							</div>			
 						</div>
-						<div class="mail" style="width:150px; float:left">
-							<img src="images/email.jpg" alt="icon-email" width="13px" height="9px">
-							<span id="s1">Mail: Contact@vinsofts.com</span>
-						</div>
-						<div class="hotline" style="width:165px; float:left;">
-							<img src="images/dienthoai.jpg" alt="icon-dienthoai" width="10px" height="10px">
-							<span id="s1">Hotline: 0988 988 988</span>
-						</div>
-					</div>
-			    	<div class="menu">
-						<ul>
-							<li><a href="#">Home</a></li>
-							<li><a href="#">Protfolio</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Gallery</a></li>
-							<li><a href="#">Contact</a></li>
-							<li><a href="#">Recruitment</a></li>
-						</ul>
-					</div>
-					<style>
-						.menu {
-							float: left;
-							width: 425px;
-							height: 20px;
-							margin-left: 30px;
-							margin-top: 20px;
-						}
-						.menu ul {
-							list-style: none;
-						}
-						.menu ul  li {
-							float: left;
-							width: 70px;
-							font-size: 10pt;
-							text-align: center;
-							line-height: 20px;
-							border-radius: 5px;
-						}
-						.menu ul li a {
-							text-decoration: none;
-							color: #9a9a9a;
-							display: block;
-							margin-right: 5px;
-						}
-						.menu ul li a:hover {
-							color: #fff;
-							background-color: #00a2ed;
-							border-radius: 20px;
-						}
-					</style>
-					<div class="icon" style="width:120px; height:25px; float:right; margin-right:25px; margin-top:15px">
-						<a href="#"><img src="images/icon-facebook.jpg" alt="icon-facebook" width="23px" height="23px"></a>
-						<a href="#"><img src="images/icon-tw.jpg" alt="icon-tw" width="23px" height="23px"></a>
-						<a href="#"><img src="images/icon-ln.jpg" alt="icon-ln" width="23px" height="23px"></a>
-						<a href="#"><img src="images/icon-gg.jpg" alt="icon-gg" width="23px" height="23px"></a>
-					</div>
-			    </div>
-	  		</div>
-    	</div>
+					</nav>
+				</div>
+			</div>
+		</header>
 		<!-- Hết phần header -->
 
-     	<div class="row">
-        	<div class="col-md-12" style="position: relative;color: white;">
-            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="item active">
-                        <img class="slide-image" src="images/anh-banner.jpg" alt="">
-                    </div>
-                    <div class="item">
-                        <img class="slide-image" src="images/anh-banner-2.jpg" alt="">
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-right" style="position: absolute; bottom: 15px;right: 60px;">
-            	<span style="font-size:23px; font-weight:bold">WEB DESIGN COMPANY REPUPATION</span><br>
-				<span style="font-size:18px">we've been brougth the most valued products and<br>servecles to our global clients during last 10 year</span>
-            </div>
-        	</div>
-      	</div>
-		<!-- Hết phần banner -->
-
+		<!-- Phần banner -->
 		<div class="row">
-			<div class="col-md-12">
-				<div align="center" style="margin-top:30px;">
-					<p style="font-size:29px; font-weight:bold">OUR SERVICES</p>
-					<p style="font-size:10px; margin-top:-15px">We Get The Job Done, No Matter The Project</p>
-				</div>
-				<div class="row" style="text-align:center; margin-top:30px">
-					<div class="col-md-4">
-						<div>
-							<img src="images/anh-mobile.jpg" alt="">
-						</div>
-						<div class="text1" style="margin-top:30px; text-align:center">
-							<p id="app">Mobie App Development</p><br>
-							<p>We are experts in mobile development industry for year. We have a team with 10 skiller developers that have been in this field for  at least 5 years so far</p><br>
-							<button type="button" class="btn btn-primary">Explore more >></button>
+			<div class="banner">
+				<div class="col-md-12">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<div class="carousel-inner">
+							<div class="item active">
+								<img class="slide-image" src="images/anh-banner.jpg" alt="banner-1" width="960px" height="299px">
+							</div>
+							<div class="item">
+								<img class="slide-image" src="images/anh-banner-2.jpg" alt="banner-2" width="960px" height="299px">
+							</div>
 						</div>
 					</div>
-					<div class="col-md-4">
-						<div>
-							<img src="images/anh-desktop.jpg" alt="">
-						</div>
-						<div class="text-1" style="margin-top:20px; text-align:center">
-							<p id="app">Website development</p><br>
-							<p>We provide website development services. <br>
-							We are experts in below feilds: <br>
-							WordPress development <br>
-							Magento development</p><br>
-							<button type="button" class="btn btn-primary">Explore more >></button>
-						</div><br>
-						<hr>
-					</div>
-					<div class="col-md-4">
-						<div>
-							<img src="images/anh-dienthoai.jpg" alt="">
-						</div>
-						<div class="text-1" style="margin-top:30px; text-align:center">
-							<p id="app">Custom IT & Software Services</p><br>
-							<p>We provide other IT and software services too. We  have a team of experts in many fields of software development, coding as well as IT related technologies</p><br>
-							<button type="button" class="btn btn-primary">Explore more >></button>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- Hết phần Our Service -->
-
-			<div class="col-md-12">
-				<div align="center">
-					<p style="font-size:29px; font-weight:bold">OUR CLIENTS</p>
-					<p style="font-size:10px; margin-top:-15px">The Cicle Of Live And Deft Continute...</p>
-				</div>
-				<div class="menu-anh">
-					<ul>
-						<li><img src="images/anh-1.jpg" alt=""></li>
-						<li><img src="images/anh-2.jpg" alt=""></li>
-						<li><img src="images/anh-3.jpg" alt=""></li>
-						<li><img src="images/anh-4.jpg" alt=""></li>
-						<li><img src="images/anh-5.jpg" alt=""></li>
-					</ul>
-				</div>
-			</div>
-			<!-- Hết phần OUR Clients -->
-			<div class="col-md-12">
-				<hr width="300px" style="margin-left: 325px">
-				<div align="center" style="margin-top:30px; color: #838383">
-					<p style="font-size:29px; font-weight:bold">OUR ARTICLES</p>
-					<p style="font-size:10px; margin-top:-15px">We Like To Keep Everyone Update</p>
-				</div>
-				<div class="row" style="text-align:left; margin-top:30px">
-					<div class="col-md-4">
-						<div>
-							<img src="images/thutuc.jpg" alt="" width="103%" height="103%">
-							<p id="a1">Vestibulum Ipsums Eros</p>
-							<p id="a2">Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam ....</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div>
-							<img src="images/lamviec.jpg" alt="" width="103%" height="103%">
-							<p id="a1">Vestibulum Ipsums Eros</p>
-							<p id="a2">Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam ....</p>
-						</div>
-					</div>
-					<div class="col-md-4">
-						<div>
-							<img src="images/thaotac.jpg" alt="" width="103%" height="103%">
-							<p id="a1">Vestibulum Ipsums Eros</p>
-							<p id="a2">Lorem ipsum dolor sit amet, consectetur adipiscing
-							elit, sed do eiusmod tempor incididunt ut labore et
-							dolore magna aliqua. Ut enim ad minim veniam ....</p>
-						</div>
+					<div class="bottom-right">
+						<span id="s1">WEB DESIGN COMPANY REPUPATION</span><br>
+						<span id="s2">we've been brougth the most valued products and<br>servecles to our global clients during last 10 year</span>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- Hết phần content -->
+		<!-- Hết phần banner -->
 		
-		<div class="row" style="background-color:#323232; color:#fff">
-			<div class="col-md-3">
-				<br>
-				<p id="p1">ABOUT VINSOFTS</p>
-				<hr width="185px">
-				<p id="text-about">Vinsofts Co., Ltd is software innovation and outsourcing company based in Hanoi, Vietnam.We provide top quality outsourcing services to global clients from USA to Australia, from Japan to EU countries.</p>
+		<!-- Phần Our Services -->
+		<section>
+			<div class="text-services">
+				<p id="p-s-1">OUR SERVICES</p>
+				<p>We Get The Job Done, No Matter The Project</p>
 			</div>
-			<div class="col-md-9">
+			<div class="posts-content" style="">
 				<div class="row">
-					<div class="col-md-6">
-						<br>
-						<p id="p1">CONTACT US</p>
-						<hr width="315px">
-						<div class="contact" style="color:#9a9a9a;">
-							<form action="">
-								<p>Name</p>
-								<input type="text" style="width:115px; height:25px; float:left">
-								<input type="text" style="width:150px; height:25px; margin-left:10px">
-								<p style="font-size:10px">First<span style="margin-left:110px">Last</span></p><br>
-								<p>Email</p>
-								<input type="text" style="width:275px; height:25px;"><br><br>
-								<p>Comment</p>
-								<textarea name="" id="" cols="43" rows="5"></textarea><br>
-								<input type="submit" style="width:65px; height:30px;margin-top:15px; color:#594d40; font-weight:bold" value="Submit">
-							</form>
+					<div class="col-md-4 col-xs-12 col-sm-6">
+						<div class="item">
+							<div class="item-thumbnail"><img src="images/anh-mobile.jpg" alt="mobile" width="126px" height="95px"></div>
+							<div class="item-title"><h4>Mobie App Development</h4></div>
+							<div class="item-text">We are experts in mobile development industry for years. We have a team with 10 skilled developers that have been in this field for at least 5 years so far.</div>
+							<button type="button" class="btn btn-primary">Explore more >></button>
+						</div>
+					</div> 
+					<div class="col-md-4 col-xs-12 col-sm-6">
+						<div class="item">
+							<div class="item-thumbnail"><img src="images/anh-desktop.jpg" alt="desktop" width="168px" height="96px"></div>
+							<div class="item-title"><h4>Website Development</h4></div>
+							<div class="item-text">We provide website development services. We are experts in below fields: WordPress development Magento development</div>
+							<button type="button" class="btn btn-primary">Explore more >></button>
 						</div>
 					</div>
-					<div class="col-md-6">
-						<br>
-						<p id="p1">OUR INFO</p>
-						<hr width="315px">
-						<div class="info">
-							<img src="images/map_03.jpg" alt="info"><br><br>
-							<p style="font-size:12px">Ki ốt số 3 Nhà N9, Khu 212, Học Viện Kỹ Thuật Quân Sự, Đường Tân Xuân, Phường Xuân Đỉnh, Quận Bắc Từ Liêm, Hà Nội</p>
+					<div class="col-md-4 col-xs-12 col-sm-6">
+						<div class="item">
+							<div class="item-thumbnail"><img src="images/anh-dienthoai.jpg" alt="telephone"  width="73px" height="96px"></div>
+							<div class="item-title"><h4>Custom IT & Software Services</h4></div>
+							<div class="item-text">We provide other IT and software services too.We have a team of experts in many fields of software development,coding as well as IT related technologies.</div>
+							<button type="button" class="btn btn-primary">Explore more >></button>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
+		<!-- Hết phần Our Services -->
+
+		<!-- Phần Our Client -->
+		<section>
+			<div class="description">
+				<p class="p3">OUR CLIENTS</p>
+				<p>The Circle Of Live And Deft Continute...</p>
+				<div class="owl-carousel owl-theme">
+					<img src="images/images-1.jpg" alt="anh-1" width="100%" height="100%">
+					<img src="images/images-2.jpg" alt="anh-2" width="100%" height="100%">
+					<img src="images/images-3.jpg" alt="anh-3" width="100%" height="100%">
+					<img src="images/images-4.jpg" alt="anh-4" width="100%" height="100%">
+					<img src="images/images-5.jpg" alt="anh-5" width="100%" height="100%">
+				</div>
+				<script src="js/my.js"></script>
+			</div>
+		</section>
+		<!-- Hết phần Our CLient -->
+
+		<!-- Phần Our ARTICLES -->
+		<section>
+			<div class="description">
+				<p class="p3">OUR ARTICLES</p>
+				<p>We Like To Keep Everyone Updated </p>
+			</div>
+			<div class="posts-content-3">
+				<div class="row">
+					<div class="col-md-4 col-xs-12 col-sm-6">
+						<div class="thumbnail">
+							<img src="images/thutuc.jpg" alt="thu-tuc" width="252px" height="166px">
+							<div class="caption">
+								<h3>Vestibulum Ipsums Eros</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12 col-sm-6">
+						<div class="thumbnail">
+							<img src="images/lamviec.jpg" alt="lam-viec" width="252" height="166px">
+							<div class="caption">
+								<h3>Vestibulum Ipsums Eros</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 col-xs-12 col-sm-6">
+						<div class="thumbnail">
+							<img src="images/thaotac.jpg" alt="thao-tac" width="254px" height="165px">
+							<div class="caption">
+								<h3>Vestibulum Ipsums Eros</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam ....</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Hêt phân Our ARTICLES -->
+
+		<!-- Phần footer -->
+		<footer>
+			<div class="footer">
+				<div class="row">
+					<div class="col-md-7">
+						<!-- foooter about -->
+						<div class="col-md-5 col-xs-12 col-sm-6">
+
+								<div class="about">
+									<p class="p2">ABOUT VINSOFTS</p>
+									<p>Vinsofts Co., Ltd is software innovation and outsourcing company based in Hanoi, Vietnam.We provide top quality outsourcing services to global clients from USA to Australia, from Japan to EU countries.</p>
+								</div>
+
+						</div>
+
+						<!-- footer contact -->
+						<div class="col-md-7 col-xs-12 col-sm-6">
+							<div class="footer-contact">
+								<p class="p2">CONTACT US </p>
+									<form action="" method="">
+										<p>Name</p>
+										<input type="text" id="i1">
+										<input type="text" id="i2">
+										<p id="f-l">First<span>Last</span></p>
+										<p>Email</p>
+										<input type="text" id="i3"><br>
+										<p>Comment</p>
+										<textarea name="" id="" cols="43" rows="5"></textarea>
+										<p><button type="button" class="btn btn-default">Submit</button></p>
+									</form>
+							</div>
+						</div>
+					</div>
+
+					<!-- footer info -->
+					<div class="col-md-5 col-xs-12 col-sm-6">
+						<div class="footer-info">
+							<div class="info">
+								<p class="p2">OUR INFO </p>
+								<div class="thumbnail-footer">	
+									<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script><div><div id='gmap_canvas'></div><div><small></small></div><div><small><a href=""></a></small></div><style>#gmap_canvas img{max-width:none!important;background:none!important}</style></div>
+										<script type='text/javascript'>function init_map(){var myOptions = {zoom:13,center:new google.maps.LatLng(21.02627985516122,105.77979697937623),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(21.02627985516122,105.77979697937623)});infowindow = new google.maps.InfoWindow({content:'<strong>VinSoft</strong><br>36 phạm hùng, từ liêm, hà nội, việt nam<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);
+									</script>
+								</div>
+								<p>Ki ốt số 3 Nhà N9, Khu 212, Học Viện Kỹ Thuật Quân Sự, Đường Tân Xuân, Phường Xuân Đỉnh, Quận Bắc Từ Liêm, Hà Nội</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</footer>
 		<!-- Hết phần footer -->
 
-    </div>
+	</div>
+  	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

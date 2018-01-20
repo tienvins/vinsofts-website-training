@@ -36,6 +36,9 @@ button {
 #title-2{
 	font-size: 10px;
 }
+#text-2{
+	font-size: 10px;
+}
 .menu-anh {
 	margin-top: 40px;
 }
@@ -45,6 +48,15 @@ button {
 .menu-anh ul li {
 	float: left;
 	margin-left: 75px;
+}
+.thu-tuc{
+	float:left; margin-left:80px; width:252px; height:166px;
+}
+.lam-viec{
+	float:left; margin-left:20px; width:252px; height:166px
+}
+.thao-tac{
+	float:left; margin-left:20px; width:255px; height:165px
 }
 .footer {
 	width: 960px;
@@ -88,4 +100,10 @@ button {
 }
 #text-about{
 	font-size: 13px;
+}
+#f-h-1{
+	width: 185px;
+}
+#f-h-2{
+	width: 315px;
 }
