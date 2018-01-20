@@ -1,0 +1,73 @@
+body{font-family: myriad Pro;
+margin:20px auto;
+background: #f6f6f6;
+}
+*{
+    margin:0;
+    padding:0;}
+#header{background: #ffffff;
+}
+
+#menutitle a{font-size: 9.86pt;}
+#menutitle ul li{float: left;
+					margin:12px;
+					list-style: none;}
+#menutitle ul li a{text-decoration: none;
+					margin-left: 5px;
+					color: #939393;}
+#menu {margin-left: 440px;
+		margin-top: -12px;}	 	
+#menu ul li {float: left;
+				list-style: none;
+				
+				border-radius: 5px;
+				text-align: center;}	
+#menu ul li a{padding:  15px 15px 15px 10px;
+				text-decoration: none;
+				font-family: myriad Pro;
+				font-size: 8.88pt;
+				color: #939393;
+				font-weight: bold;}	
+#menu ul li:first-child{background:#00a2ed; }
+
+#menu ul li:hover{background: #00a2ed;}	
+#menu ul li a:hover{color: #ffffff;
+}
+#menu-icon{float:right;
+			width: 10px;}
+#menu-icon ul li{float: right;}			
+
+.image img{
+			height: 299px;}						
+#content{background: #ffffff;
+		height: 1360px;}			
+#myCarousel img {width: 1170px;
+					height: 400px;
+			position: relative;}
+		.textin {position: absolute;
+		top: 415px;
+		right:200px;
+		
+		}
+		.textin span{font-size: 22.86pt;
+			color: #ffffff;
+			left: 10px;}
+.textin p{color: #ffffff;}
+.textip {text-align: center;
+	color: #838383;
+	margin-top: 10px;
+
+}
+.textip p{font-size: 29.3pt;
+			height: 52px;}
+.textip span{font-size: 10pt;
+				}
+#anh{
+	height: 256px;
+	text-align: center;}
+#anh p{font-size: 14.86pt;
+		font-weight: bold;
+	color: #706972;}	
+	#anh span{font-size: 11.86pt;
+color: #7c767e;}
+
