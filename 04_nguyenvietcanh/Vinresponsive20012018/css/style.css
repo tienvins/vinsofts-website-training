@@ -232,3 +232,7 @@ padding-top: 50px;
 .item-thumbnail img{
     padding-top: 25px;
 }
+
+.caption{
+    text-align: center;
+}
