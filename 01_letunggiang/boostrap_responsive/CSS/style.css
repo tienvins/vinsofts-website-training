@@ -1,5 +1,5 @@
 /* MEDIA CHO MÀN HÌNH MOBIE VÀ IPAD*/
-@media only screen and (min-width: 360px) and (max-width: 750px) {
+@media only screen and (min-width: 320px) and (max-width: 750px) {
   .header-contact{
     display: none;
   }
