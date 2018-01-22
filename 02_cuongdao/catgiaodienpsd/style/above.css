@@ -1,5 +1,5 @@
 body{font-family: myriad Pro;
-		margin:20px auto;
+		margin:0  auto;
 		background: #f6f6f6;
 }
 *{
@@ -62,7 +62,7 @@ body{font-family: myriad Pro;
 			height: 52px;}
 .textip span{font-size: 10pt;
 				}
-#anh{
+#anh{width: 100%;
 	height: 256px;
 	text-align: center;}
 #anh p{font-size: 14.86pt;

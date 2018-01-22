@@ -11,6 +11,7 @@
 .top{
 	height: 84px;
 	width: 960px;
+	margin: auto;
 }
 .logo{
 	float: left;
@@ -18,36 +19,75 @@
 	margin-top: 9px;
 }
 .address{
+	width: 540px;
 	height: 14px;
-	width: 424px;
 	float:right;
 	margin-top: 20px;
 	margin-right: 19px;
+	color: #868686;
+}
+.skype{
+	float: left;
+	width: 30%;
+}
+.gmail{
+	float: left;
+	width: 38%;
+}
+.hotline{
+	float: left;
+	width: 30%;
 }
 .menu{
-	width: 435px;
-	height: 25px;
-	margin-top: 50px;
-	margin-right: 148px;
-	float: right;
+	float: left;
+	padding-top: 7px; 
 }
 .menu ul li{
-	display: inline block;
-	width: 62px;
+	display: inline;
 	text-align: center;
-	list-style: none;
+	list-style: none; 
+	padding: 0px 6px;
 }
 .menu ul li a{
 	text-decoration: none;
+	color: #868686;
 }
+.menu ul li a:hover{
+	background: #00a2ed;
+	border-radius: 13px;
+	color: #FFFFFF;
+	padding: 5px;
+}
+	
 .icon {
-	width: 146px;
 	float: right;
-	margin-right: 0px;
-	margin-top: 52px;
+	text-decoration: none;
+}
+.icon a{
+	padding: 0px 6px;
 }
 .banner{
 	background-image: url(images/banner.jpg);
 	width: 960px;
 	height: 299px;
+	position: relative;
+}
+.img{
+	width: 19%;
+	float: left;
+	padding-top: 10px;
+	padding-left: 7px;
+}
+.bot{
+	width: 27%;
+	float: left;
+	margin-left: 48px;
+}
+.bottom{
+	width: 960px;
+	height: 400px;
+	background: #323232;
+}
+botton{
+	background-color: #00a2ed;
 }
