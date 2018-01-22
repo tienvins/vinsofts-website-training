@@ -2,31 +2,46 @@
 	margin: 0;
 	padding: 0;
 }
-@media only screen and (min-width: 320px) and (max-width: 750px) {
+body{
+font-family:Myriad Pro;
+}
+.navbar-inverse{
+	background-color: #fff;
+	border-color: #fff;
+}
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	border-color: #fff;
+}
+.navbar-collapse{
+	float: left;
+	margin-left: 160px;
+}
+@media only screen and (max-width: 767px) {
     .header-contact{
         display: none;
     }
-    .banner{
+/*     .banner{
         display: none;
-    }
+    } */
     .menu-icon{
       display: none;
     }
     .item {
     	padding-top: 20px;
     }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 992px){
-	.header-contact{
-        display: none;
+    .bottom-right{
+    	display: none;
     }
 }
-
-.content{
-	max-width:960px; margin:auto; overflow: hidden; font-family:Myriad Pro
+header{
+	overflow: hidden;
 }
-
+.banner{
+	overflow: hidden;
+}
+/* section{
+	overflow: hidden;
+} */
 /* CSS cho logo */
 .header-logo{
 	text-align: center
@@ -39,38 +54,22 @@
 }
 
 /* CSS cho thanh menu */
-.menu-sidebar{
-	clear: both;
-}
-.navbar-default{
-	background-color: #ffffff;
-}
-.navbar-default button{
-	float: left;
-}
+
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 	float: left;
 }
-.navbar-default .navbar-nav>li>a {
-	color: #939393;
-	padding: 7px 15px;
-}
-.navbar-default .navbar-nav>li>a:hover {
+.navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
 	border-radius: 10px;
 	background: #00a2ed;
 	color: #ffffff;
-	width: auto;
-	height: 30px;
-}
 
-.navbar-nav a{
-	color: #939393;
-	font-weight: 600;
 }
 
 /* CSS cho menu-icon */
 .menu-icon{
-	float: right; margin-right: 20px; margin-top:5px;
+	margin-right: 10px;
+	margin-top: 10px;
+	float: left;
 }
 .menu-icon ul{
 	list-style: none;
