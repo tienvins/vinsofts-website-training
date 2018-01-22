@@ -10,12 +10,12 @@ margin-left: 360px;
 }
 .hr{margin-top: 5px;}
 #picture{margin-bottom: 5px;
-			margin-left: 515px;
-				overflow: hidden;
-				width: 150px;
-				height: 150px;}
-#picture img{width: 99px;
-				height: 99px;}				
+			
+			
+				width: auto;
+				height: auto;}
+#picture img{width: auto;
+				height: 100%;}				
 			
 .mySlides {display:none;
 			text-align: center}
@@ -23,8 +23,8 @@ margin-left: 360px;
 
 #footer{background: #323232;
 		text-align: center;}		
-#about, #contact, #info{height: 400px;}	
-#about p, #contact p, #info p{margin-bottom: 27px;
+#about, #contact, #info{height: auto;}	
+#about p, #contact p, #info p{
 							 color: #ffffff; 
 							 font-size:14.86pt;
 							 text-align: left; }
@@ -39,37 +39,36 @@ color: #fff;}
 td span{color:red;}
 @media only screen and (max-width: 600px) {
 	#menutitle{display: none;}
-	#myCarousel{display: none;}
-	.textin{text-align: center;
-			height: 100px;}
+	.textin{
+		display: none;
+		}
+
 	.textip{text-align: center;
 				font-size: 15px;}
 	#anh{text-align: center;}
-	#footer{height: 1000px;
-				}
-	#content{height: 1950px;
+	#picture img{height: 100%;
+					width: 100%;}
+	#anh img{width: auto;
+				height: 100%;}
+
+	#footer{height: auto;
+			width: 100%;
+			text-align: center;	}
+	#content{height: auto;
 			overflow: hidden;}
 	#menu{margin-left:0;
 			}
 	.a a{display: none;}
 	#menu ul li{float: none;
 				padding:  15px 10px 5px 10px;}
-
-
+	#myCarousel{height: auto;}
+	#myCarousel img{height: 150px;}
 	#logo{text-align: center;}
-	hr{display: none;}
-	#footer #about{height: 200px;}
-	 }
- @media only screen and (max-width: 992px) and (min-width:768px){
-  	#myCarousel{display: none;
-  					}
-@media screen and (max-width: 1024px) and (min-width: 768px){
-	#menu{margin-left: 50px;}
-	.a a{display: none;}
-	#menu ul li {padding:  15px 5px 15px 5px;}
-}	
-@media screen and (max-width: 1366px) and (min-width: 1024px)
-{.a a{display: none;} }		
+	hr{width: 250px;}
+	#footer #about{height: auto;}
+	#info{margin: 0 auto;}
+	
+	}
 
   
 
