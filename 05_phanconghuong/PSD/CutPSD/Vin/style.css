@@ -24,7 +24,7 @@
 	float:right;
 	margin-top: 20px;
 	margin-right: 19px;
-	
+	color: #868686;
 }
 .skype{
 	float: left;
@@ -76,4 +76,18 @@
 	width: 19%;
 	float: left;
 	padding-top: 10px;
+	padding-left: 7px;
+}
+.bot{
+	width: 27%;
+	float: left;
+	margin-left: 48px;
+}
+.bottom{
+	width: 960px;
+	height: 400px;
+	background: #323232;
+}
+botton{
+	background-color: #00a2ed;
 }
