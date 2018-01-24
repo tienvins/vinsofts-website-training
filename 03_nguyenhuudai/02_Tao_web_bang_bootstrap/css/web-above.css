@@ -16,13 +16,13 @@ font-family:Myriad Pro;
 	float: left;
 	margin-left: 160px;
 }
+.banner{
+	margin-top: -30px;
+}
 @media only screen and (max-width: 767px) {
     .header-contact{
         display: none;
     }
-/*     .banner{
-        display: none;
-    } */
     .menu-icon{
       display: none;
     }
@@ -31,6 +31,26 @@ font-family:Myriad Pro;
     }
     .bottom-right{
     	display: none;
+    }
+    .navbar-inverse .navbar-toggle{
+    	background-color: #333;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .header-contact{
+        text-align: center;
+    }
+    .menu-icon{
+    	margin-top: -20px;
+    }
+    .item {
+    	padding-top: 20px;
+    }
+    .bottom-right{
+    	display: none;
+    }
+    .navbar-collapse{
+    	margin-left: 0px;
     }
 }
 header{
@@ -57,19 +77,18 @@ header{
 
 .navbar-default .navbar-collapse, .navbar-default .navbar-form{
 	float: left;
+	margin-left: 100px;
 }
 .navbar-inverse .navbar-nav>li>a:focus, .navbar-inverse .navbar-nav>li>a:hover {
 	border-radius: 10px;
 	background: #00a2ed;
 	color: #ffffff;
-
 }
 
 /* CSS cho menu-icon */
 .menu-icon{
-	margin-right: 10px;
 	margin-top: 10px;
-	float: left;
+	float: right;
 }
 .menu-icon ul{
 	list-style: none;
