@@ -1,4 +1,21 @@
-
+<?php
+  include 'models/connect.php';
+  if(isset($_POST['add_new'])){
+    $tennv=$_POST['name'];
+    $ngaysinh=$_POST['birthday'];
+    $diachi=$_POST['address'];
+    $gioitinh=$_POST['gender'];
+    $sdt=$_POST['phone'];
+    $mapb=$_POST['mapb'];
+    $anh=$_FILES['hinhanh']['tmp_name'];
+    $duongdan=$_FILES['hinhanh']['name'];
+    move_uploaded_file($anh, "images/".$duongdan);
+    $sql="Insert into db22_nhanvien values (null, '$tennv', '$ngaysinh', '$diachi', '$gioitinh', '$sdt', '$mapb', '$duongdan')";
+    $thucthi=mysqli_query($conn,$sql);
+    header('location: index.php');
+    // echo $_POST['name'];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -191,23 +208,6 @@
             </div>
           </div>
         </div>
-        <?php
-  include 'models/connect.php';
-  if(isset($_POST['add_new'])){
-    $tennv=$_POST['name'];
-    $ngaysinh=$_POST['birthday'];
-    $diachi=$_POST['address'];
-    $gioitinh=$_POST['gender'];
-    $sdt=$_POST['phone'];
-    $mapb=$_POST['mapb'];
-    $anh=$_FILES['hinhanh']['tmp_name'];
-    $duongdan=$_FILES['hinhanh']['name'];
-    move_uploaded_file($anh, "images/".$duongdan);
-    $sql="Insert into db22_nhanvien values (null, '$tennv', '$ngaysinh', '$diachi', '$gioitinh', '$sdt', '$mapb', '$duongdan')";
-    $thucthi=mysqli_query($conn,$sql);
-    // echo $_POST['name'];
-  }
-?>
         <!-- /page content -->
 
         <!-- footer content -->
