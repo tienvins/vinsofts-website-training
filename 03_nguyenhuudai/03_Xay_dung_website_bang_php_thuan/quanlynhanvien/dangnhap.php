@@ -1,3 +1,15 @@
+<?php
+  include 'models/connect.php';
+  if(isset($_POST['dangky'])){
+    $username=$_POST['username'];
+    $email=$_POST['email'];
+    $password=$_POST['password'];
+    $sql="Insert into db22_users (username, email, password) values ('$username', '$email', '$password')";
+    $thucthi=mysqli_query($conn,$sql);
+    header('location:dangnhap.php#signin');
+    // echo $_POST['name'];
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -64,26 +76,26 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form>
+            <form method="POST">
               <h1>Đăng ký tài khoản</h1>
               <div>
-                <input type="text" class="form-control" placeholder="Tên đăng nhập" required="" />
+                <input type="text" class="form-control" placeholder="Tên đăng nhập" name="username" required="" />
               </div>
               <div>
-                <input type="email" class="form-control" placeholder="Địa chỉ email" required="" />
+                <input type="email" class="form-control" placeholder="Địa chỉ email" name="email" required="" />
               </div>
               <div>
-                <input type="password" class="form-control" placeholder="Mật khẩu" required="" />
+                <input type="password" class="form-control" placeholder="Mật khẩu" name="password" required="" />
               </div>
               <div>
-                <a class="btn btn-default submit" href="index.html">Đăng ký</a>
+                <button type="submit" name="dangky">Đăng ký</button>
               </div>
 
               <div class="clearfix"></div>
 
               <div class="separator">
                 <p class="change_link">Đã có tài khoản ?
-                  <a href="#signin" class="to_register"> Đăng nhập </a>
+                  <a href="#signin" class="to_register">Đăng nhập</a>
                 </p>
 
                 <div class="clearfix"></div>

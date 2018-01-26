@@ -1,23 +1,30 @@
 <?php
 	include 'models/connect.php';
 	$id=$_GET['MaNV'];
-	$sql="Select * From db22_nhanvien where MaNV = $id";
-	$result=mysqli_query($conn,$sql);
-	$row=mysqli_fetch_array($result);
-			  if(isset($_POST['update'])){
-			    $tennv=$_POST['name'];
-			    $ngaysinh=$_POST['birthday'];
-			    $diachi=$_POST['address'];
-			    $gioitinh=$_POST['gender'];
-			    $sdt=$_POST['phone'];
-			    $mapb=$_POST['mapb'];
-			    $anh=$_FILES['hinhanh']['tmp_name'];
-			    $duongdan=$_FILES['hinhanh']['name'];
-			    move_uploaded_file($anh, "images/".$duongdan);
-			    $sql="Update db22_nhanvien SET TenNV='$tennv', NgaySinh='$ngaysinh', QueQuan='$diachi', GioiTinh='$gioitinh', SDT='$sdt', MaPB='$mapb', Hinh='$duongdan' Where db22_nhanvien.MaNV='$id'";
-			    $thucthi=mysqli_query($conn,$sql);
-			    header('location:quanly.php');
-			}
+	if(!$id){
+		header('location:error-403.php');
+	}
+	else
+	{
+		$sql="Select * From db22_nhanvien where MaNV = $id";
+		$result=mysqli_query($conn,$sql);
+		$row=mysqli_fetch_array($result);
+	  	if(isset($_POST['update'])){
+		    $tennv=$_POST['name'];
+		    $ngaysinh=$_POST['birthday'];
+		    $diachi=$_POST['address'];
+		    
+		    $gioitinh=$_POST['gender'];
+		    $sdt=$_POST['phone'];
+		    $mapb=$_POST['mapb'];
+		    $anh=$_FILES['hinhanh']['tmp_name'];
+		    $duongdan=$_FILES['hinhanh']['name'];
+		    move_uploaded_file($anh, "images/".$duongdan);
+		    $sql="Update db22_nhanvien SET TenNV='$tennv', NgaySinh='$ngaysinh', QueQuan='$diachi', GioiTinh='$gioitinh', SDT='$sdt', MaPB='$mapb', Hinh='$duongdan' Where db22_nhanvien.MaNV='$id'";
+		    $thucthi=mysqli_query($conn,$sql);
+		    header('location:quanly.php');
+	}
+	}
 ?>
 			
 <!DOCTYPE html>

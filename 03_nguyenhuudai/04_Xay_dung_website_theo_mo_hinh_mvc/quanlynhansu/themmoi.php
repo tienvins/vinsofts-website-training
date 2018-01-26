@@ -1,28 +1,20 @@
- <?php
-          include("models/connect.php");
-          if(isset($_POST['add_new'])){
-            $tennv=$_POST['name'];
-            $ngaysinh=$_POST['birthday'];
-            $quequan=$_POST['address'];
-            $gioitinh=$_POST['gender'];
-            $sdt=$_POST['phone'];
-            $mapb=$_POST['mapb'];
-            $file_name="";
-            // $file_name=$_FILES['hinhanh']['name'];
-            // $file_path=$_FILES['hinhanh']['tmp_name'];
-            // $uploaded_file=move_uploaded_file($file_path,$file_name);
-            $query="Insert into db22_nhanvien values($tennv,$ngaysinh,$quequan,$gioitinh,$sdt,$mapb,$file_name)";
-            $result=mysqli_query($conn,$query);
-            if(!$result)
-            {
-              echo "Thành công";
-            }
-            else
-            {
-              echo "Không thành công";
-            }
-          }
-        ?>
+<?php
+  if(isset($_POST['add_new'])){
+    $tennv=$_POST['name'];
+    $ngaysinh=$_POST['birthday'];
+    $diachi=$_POST['address'];
+    $gioitinh=$_POST['gender'];
+    $sdt=$_POST['phone'];
+    $mapb=$_POST['mapb'];
+    $anh=$_FILES['hinhanh']['tmp_name'];
+    $duongdan=$_FILES['hinhanh']['name'];
+    move_uploaded_file($anh, "public/images/".$duongdan);
+    require_once("controllers/c_thongtin.php");
+    $controller=new C_thongtin();
+    $controller->addNhanVien($tennv,$ngaysinh,$diachi,$gioitinh,$sdt,$mapb,$duongdan);
+    header('location:quanly.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -146,19 +138,19 @@
             </div>
 
 
-            <div class="row">
+             <div class="row">
               <div class="col-md-12">
                 <div class="form-them-moi">
-                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="POST" action="" enctype="multipart/form-data">
+                    <form class="form-horizontal form-label-left" method="post" action="" enctype="multipart/form-data">
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Họ và tên <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Họ và tên <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" name="name" class="form-control col-md-7 col-xs-12" placeholder="Nhập họ và tên">
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="last-name">Ngày sinh <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input class="date-picker form-control col-md-7 col-xs-12" type="date" name="birthday">
@@ -173,14 +165,8 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Giới tính</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <div class="btn-group" data-toggle="buttons">
-                            <label class="btn btn-default" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
-                              <input type="radio" name="gender" value="male"> &nbsp; Nam &nbsp;
-                            </label>
-                            <label class="btn btn-primary" data-toggle-class="btn-primary" data-toggle-passive-class="btn-default">
+                              <input type="radio" name="gender" value="male"> Nam 
                               <input type="radio" name="gender" value="female"> Nữ
-                            </label>
-                          </div>
                         </div>
                       </div>
                       <div class="form-group">
@@ -193,10 +179,10 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã phòng ban <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select name="mapb" id="mapb" class="mapb form-control col-md-7 col-xs-12">
-                            <option value="web" label="Web">1</option>
-                            <option value="mobile" label="Mobile">2</option>
-                            <option value="marketting" label="Marketting">3</option>
+                          <select name="mapb" class="mapb form-control col-md-7 col-xs-12">
+                            <option label="Web">1</option>
+                            <option label="Mobile">2</option>
+                            <option label="Marketting">3</option>
                           </select>
                         </div>
                       </div>
@@ -204,7 +190,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Hình ảnh</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="hinhanh" class="form-control col-md-7 col-xs-12" type="file" name="hinhanh">
+                          <input class="form-control col-md-7 col-xs-12" type="file" name="hinhanh">
                         </div>
                       </div>
 
@@ -221,7 +207,6 @@
             </div>
           </div>
         </div>
-        
         <!-- /page content -->
 
         <!-- footer content -->
