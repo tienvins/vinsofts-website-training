@@ -27,7 +27,8 @@ margin-left: 360px;
 #about p, #contact p, #info p{
 							 color: #ffffff; 
 							 font-size:14.86pt;
-							 text-align: left; }
+							 text-align: left; 
+							 word-wrap: break-word;}
 .text{text-align: left;}							 
 .text span, #info span{color: #ffffff;
 			font-size: 10.86pt;}
@@ -53,7 +54,8 @@ td span{color:red;}
 
 	#footer{height: auto;
 			width: 100%;
-			text-align: center;	}
+			text-align: center;
+			word-wrap: break-word;	}
 	#content{height: auto;
 			overflow: hidden;}
 	#menu{margin-left:0;
@@ -65,9 +67,10 @@ td span{color:red;}
 	#myCarousel img{height: 150px;}
 	#logo{text-align: center;}
 	hr{width: 250px;}
-	#footer #about{height: auto;}
-	#info{margin: 0 auto;}
+	 #about, #info, #contact{height: auto;
+		margin: 0 20px;}
 	
+	.mapgg{margin-right: 10px;}
 	}
 
   
