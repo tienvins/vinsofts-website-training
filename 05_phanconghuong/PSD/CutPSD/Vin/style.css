@@ -1,6 +1,7 @@
 *{
 	padding: 0px;
 	margin: 0px;
+	font-family: roboto;
 }
 
 .all{
@@ -19,52 +20,56 @@
 	margin-top: 9px;
 }
 .address{
-	width: 540px;
+	width: 500px;
 	height: 14px;
 	float:right;
 	margin-top: 20px;
 	margin-right: 19px;
-	color: #868686;
+	color: #838383;
+	font-size: 11px;
 }
 .skype{
-	float: left;
-	width: 30%;
+	float: right;
+	width: 28%;
 }
 .gmail{
-	float: left;
-	width: 38%;
+	float: right;
+	width: 33%;
 }
 .hotline{
-	float: left;
-	width: 30%;
+	float: right;
+	width: 25%;
 }
 .menu{
 	float: left;
 	padding-top: 7px; 
 }
+
 .menu ul li{
 	display: inline;
 	text-align: center;
 	list-style: none; 
-	padding: 0px 6px;
+	padding: 0px 13px;
 }
 .menu ul li a{
 	text-decoration: none;
-	color: #868686;
+	color: #838383;
+	font-size: 12px;
+	font-weight: bold;
 }
 .menu ul li a:hover{
 	background: #00a2ed;
-	border-radius: 13px;
+	border-radius:5px;
 	color: #FFFFFF;
-	padding: 5px;
 }
 	
 .icon {
 	float: right;
 	text-decoration: none;
+	margin-right: 20px;
 }
 .icon a{
-	padding: 0px 6px;
+	padding: 0px 4px;
 }
 .banner{
 	background-image: url(images/banner.jpg);
