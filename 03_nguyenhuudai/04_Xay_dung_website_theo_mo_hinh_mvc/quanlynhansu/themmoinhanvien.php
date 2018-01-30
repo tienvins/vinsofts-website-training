@@ -1,18 +1,18 @@
 <?php
   if(isset($_POST['add_new'])){
-    $tennv=$_POST['name'];
-    $ngaysinh=$_POST['birthday'];
-    $diachi=$_POST['address'];
-    $gioitinh=$_POST['gender'];
-    $sdt=$_POST['phone'];
-    $mapb=$_POST['mapb'];
-    $anh=$_FILES['hinhanh']['tmp_name'];
-    $duongdan=$_FILES['hinhanh']['name'];
+    $tennv    = $_POST['name'];
+    $ngaysinh = $_POST['birthday'];
+    $diachi   = $_POST['address'];
+    $gioitinh = $_POST['gender'];
+    $sdt      = $_POST['phone'];
+    $mapb     = $_POST['mapb'];
+    $anh      = $_FILES['hinhanh']['tmp_name'];
+    $duongdan = $_FILES['hinhanh']['name'];
     move_uploaded_file($anh, "public/images/".$duongdan);
-    require_once("controllers/c_thongtin.php");
-    $controller=new C_thongtin();
-    $controller->addNhanVien($tennv,$ngaysinh,$diachi,$gioitinh,$sdt,$mapb,$duongdan);
-    header('location:quanly.php');
+    require_once("controllers/c_nhanvien.php");
+    $controller   = new C_NhanVien();
+    $controller->addNhanVien($tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
+    header('location:quanlynhanvien.php');
   }
 ?>
 <!DOCTYPE html>
@@ -66,9 +66,9 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Trang chủ </a>
+                  <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ </a>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Giới thiệu </a>
+                  <li><a href="quanlynhanvien.php"><i class="fa fa-edit"></i> Trang quản lý </a>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Liên hệ </span></a>
                   </li>
@@ -137,8 +137,7 @@
               </div>
             </div>
 
-
-             <div class="row">
+            <div class="row">
               <div class="col-md-12">
                 <div class="form-them-moi">
                     <form class="form-horizontal form-label-left" method="post" action="" enctype="multipart/form-data">
@@ -146,44 +145,50 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Họ và tên <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="name" class="form-control col-md-7 col-xs-12" placeholder="Nhập họ và tên">
+                          <input type="text" name="name" class="form-control col-md-7 col-xs-12" placeholder="Nhập họ và tên" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input class="date-picker form-control col-md-7 col-xs-12" type="date" name="birthday">
+                          <input class="date-picker form-control col-md-7 col-xs-12" type="date" name="birthday" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Quê quán</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input class="form-control col-md-7 col-xs-12" type="text" name="address" placeholder="Nhập quê quán">
+                          <input class="form-control col-md-7 col-xs-12" type="text" name="address" placeholder="Nhập quê quán" required>
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Giới tính</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="radio" name="gender" value="Nam"> Nam 
+                              <input type="radio" name="gender" value="Nam" checked="checked"> Nam 
                               <input type="radio" name="gender" value="Nữ"> Nữ
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Số điện thoại</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input class="form-control col-md-7 col-xs-12" type="text" name="phone" placeholder="Nhập số điện thoại">
+                          <input class="form-control col-md-7 col-xs-12" type="text" name="phone" placeholder="Nhập số điện thoại" required>
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã phòng ban <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên phòng ban <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select name="mapb" class="mapb form-control col-md-7 col-xs-12">
+                            <!-- Gọi tới controller show danh sách phòng ban -->
                             <?php
-                              require_once("controllers/c_thongtin.php");
-                              $controller=new C_thongtin();
-                              $controller->getPhongBan();
+                              require_once("controllers/c_nhanvien.php");
+                              $controller   = new C_NhanVien();
+                              $ds           = $controller->getPhongBan();
+                               foreach ($ds as $key ) {
+                                  ?>
+                                  <option value="<?php echo $key->MaPB ?>" ><?php echo $key->TenPB ?></option>
+                                  <?php
+                                 } 
                             ?>
                           </select>
                         </div>

@@ -49,9 +49,9 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Trang chủ </a>
+                  <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ </a>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Giới thiệu </a>
+                  <li><a href="quanlynhanvien.php"><i class="fa fa-edit"></i> Trang quản lý </a>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Liên hệ </span></a>
                   </li>
@@ -216,9 +216,10 @@
                           </ul>
                         </div>
                       <div class="clearfix"></div>
+                      <!-- Gọi tới controller show danh sách nhân viên -->
                       <?php
-                        require_once("controllers/c_thongtin.php");
-                        $controller=new C_thongtin();
+                        require_once("controllers/c_nhanvien.php");
+                        $controller   = new C_NhanVien();
                         $controller->getDSNV(); 
                       ?>
                     </div>

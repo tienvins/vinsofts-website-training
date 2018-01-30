@@ -1,21 +1,27 @@
 <?php
-  require_once("controllers/c_thongtin.php");
-  $id=$_GET['MaNV'];
-  $controller=new C_thongtin();
+  require_once("controllers/c_nhanvien.php");
+  $id         = $_GET['MaNV'];
+  $controller = new C_NhanVien();
   $tt=$controller->getNhanVienById($id);
+  $duongdan   = $tt->Hinh;
   if(isset($_POST['update'])){
-    $manv=$_POST['manv'];
-    $tennv=$_POST['name'];
-    $ngaysinh=$_POST['birthday'];
-    $diachi=$_POST['address'];
-    $gioitinh=$_POST['gender'];
-    $sdt=$_POST['phone'];
-    $mapb=$_POST['mapb'];
-    $anh=$_FILES['hinhanh']['tmp_name'];
-    $duongdan=$_FILES['hinhanh']['name'];
+    $manv     = $_POST['manv'];
+    $tennv    = $_POST['name'];
+    $ngaysinh = $_POST['birthday'];
+    $diachi   = $_POST['address'];
+    $gioitinh = $_POST['gender'];
+    $sdt      = $_POST['phone'];
+    $mapb     = $_POST['mapb'];
+    $anh      = $_FILES['hinhanh']['tmp_name'];
+    if($anh==null){
+      $duongdan=$tt->Hinh;
+    }
+    else{
+      $duongdan = $_FILES['hinhanh']['name'];
+    }
     move_uploaded_file($anh, "public/images/".$duongdan);
-    $controller->editNhanVien($manv,$tennv,$ngaysinh,$diachi,$gioitinh,$sdt,$mapb,$duongdan);
-    header('location:quanly.php');
+    $controller->editNhanVien($manv, $tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
+    header('location:quanlynhanvien.php');
   }
 ?>
 <!DOCTYPE html>
@@ -46,7 +52,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Vinsofts</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Vinsofts</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -69,9 +75,9 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Trang chủ </a>
+                  <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ </a>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Giới thiệu </a>
+                  <li><a href="quanlynhanvien.php"><i class="fa fa-edit"></i> Trang quản lý </a>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Liên hệ </span></a>
                   </li>
@@ -175,6 +181,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Giới tính</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+                          <!-- Hàm lấy lựa chọn giới tính sang sửa thông tin -->
                               <?php
                                 function checked($value, $v_compare){
                                   if($value==$v_compare)
@@ -195,15 +202,19 @@
                         </div>
                       </div>
                       <div class="form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã phòng ban <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Tên phòng ban <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select name="mapb" class="mapb form-control col-md-7 col-xs-12">
-                            <option selected="selected"><?php echo $tt->MaPB ?></option>
                             <?php
-                              require_once("controllers/c_thongtin.php");
-                              $controller=new C_thongtin();
-                              $controller->getPhongBan(); 
+                              require_once("controllers/c_nhanvien.php");
+                              $controller   = new C_NhanVien();
+                              $ds           = $controller->getPhongBan();
+                                foreach ($ds as $key ) {
+                                  ?>
+                                  <option value="<?php echo $key->MaPB ?>" <?php if($tt->MaPB==$key->MaPB) echo "selected" ?> ><?php echo $key->TenPB ?></option>
+                                  <?php
+                                 } 
                             ?>
                           </select>
                         </div>
@@ -211,7 +222,10 @@
 
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Hình ảnh</label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
+                        <div class="col-md-2 col-sm-6 col-xs-12">
+                          <img src="public/images/<?php echo $tt->Hinh ?>" alt="..." class="img-circle" width="128px" height="128px">
+                        </div>
+                        <div class="col-md-4 col-sm-6 col-xs-12">
                           <input class="form-control col-md-7 col-xs-12" type="file" name="hinhanh">
                         </div>
                       </div>
