@@ -1,8 +1,8 @@
-<!-- <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <!-- Meta, title, CSS, favicons, etc. -->
+     Meta, title, CSS, favicons, etc.
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,14 +10,14 @@
     <title>Contact Form by Lê Tùng Giang</title>
 
     <!-- Bootstrap -->
-    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <!-- <link href="nprogress/nprogress.css" rel="stylesheet"> -->
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="public/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -214,11 +214,40 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <br />
-                   
-                   <?php 
-                        require 'view/nhansu-add.php';
-                    ?>
+                    <br/>
+                      <?php require 'contacts-add2.php' ?>
+
+                      <!-- <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="contacts-list.php">
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo !empty($data['name']) ? $data['name'] : ''; ?>" > <?php if (!empty($errors['name'])) echo $errors['name']; ?>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">Address <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="Address" name="last-name" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo !empty($data['address']) ? $data['address'] : ''; ?>"><?php if (!empty($errors['address'])) echo $errors['address']; ?>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">PhoneNumber</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="PhoneNumber" class="form-control col-md-7 col-xs-12" type="text" name="PhoneNumber" value="<?php echo !empty($data['phonenumber']) ? $data['phonenumber'] : ''; ?>"><?php if (!empty($errors['phonenumber'])) echo $errors['phonenumber']; ?>
+                        </div>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-success"  name="add_employ">Submit</button>
+                          <button class="btn btn-primary" type="reset">Reset</button>
+                          <button class="btn btn-primary" type="button"></a>Cancel</button>
+                        </div>
+                      </div>
+                    </form>  -->
                   </div>
                 </div>
               </div>
@@ -238,14 +267,14 @@
     </div>
 
     <!-- jQuery -->
-    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="public/lib/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
     <!-- <script src="fastclick/lib/fastclick.js"></script> -->
     <!-- NProgress -->
     <!-- <script src="nprogress/nprogress.js"></script> -->
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="public/build/js/custom.min.js"></script>
   </body>
 </html> -->

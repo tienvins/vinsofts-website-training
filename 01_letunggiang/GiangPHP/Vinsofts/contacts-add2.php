@@ -1,6 +1,6 @@
 <?php
 
-require './models/database.php';
+require 'models/database.php';
 
 // Nếu người dùng submit form
 if (!empty($_POST['add_employ']))
@@ -32,13 +32,12 @@ if (!empty($_POST['add_employ']))
 }
 disconnect_db();  
 ?>
- <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="contacts-add.php">
+ <!--   <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <input type="text" id="name" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo !empty($data['name']) ? $data['name'] : ''; ?>" > <?php if (!empty($errors['name'])) echo $errors['name']; ?>
-
                         </div>
                       </div>
                       <div class="form-group">
@@ -62,20 +61,11 @@ disconnect_db();
                           <button class="btn btn-primary" type="button"></a>Cancel</button>
                         </div>
                       </div>
-                    </form>
-
-<!-- <!DOCTYPE html>
- <html>
-    <head>
-        <title>Thêm nhan su</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <h1>Thêm nhan su </h1>
-        <!-- <a href="../../contacts-list.php">Trở về</a> <br/> <br/> -->
-        <form method="post" action="./nhansu-add.php">
-            <table width="50%" border="1" cellspacing="0" cellpadding="10">
+                    </form>  -->  
+ 
+          <form method="post" action="contacts-add2.php">
+            <a href="contacts-list.php">Trở về</a> 
+            <table width="50%" border="1" cellspacing="0" cellpadding="10" >
                 <tr>
                     <td>Name</td>
                     <td>
@@ -104,6 +94,4 @@ disconnect_db();
                     </td>
                 </tr>
             </table>
-        </form> -->
-    </body>
-</html>
+        </form>  
