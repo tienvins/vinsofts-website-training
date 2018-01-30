@@ -54,9 +54,9 @@
             <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
               <div class="menu_section">
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-home"></i> Trang chủ </a>
+                  <li><a href="index.php"><i class="fa fa-home"></i> Trang chủ </a>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Giới thiệu </a>
+                  <li><a href="quanlynhanvien.php"><i class="fa fa-edit"></i> Trang quản lý </a>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Liên hệ </span></a>
                   </li>
@@ -184,7 +184,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Quản lý thông tin nhân viên / <a href="themmoi.php">Thêm mới nhân viên</a></h3>
+                <h3>Quản lý thông tin nhân viên / <a href="themmoinhanvien.php">Thêm mới nhân viên</a></h3>
               </div>
 
               <div class="title_right">
@@ -228,9 +228,6 @@
                       <table class="table table-striped jambo_table bulk_action">
                         <thead>
                           <tr class="headings">
-                            <th>
-                              <input type="checkbox" id="check-all" class="flat">
-                            </th>
                             <th class="column-title">Mã nhân viên </th>
                             <th class="column-title">Tên nhân viên </th>
                             <th class="column-title">Ngày sinh </th>
@@ -246,10 +243,11 @@
                             </th> -->
                           </tr>
                         </thead>
+                        <!-- Gọi ra table danh sách nhân viên -->
                         <?php
-                          require_once("controllers/c_thongtin.php");
-                          $controller=new C_thongtin();
-                          $controller->getQuanLy(); 
+                          require_once("controllers/c_nhanvien.php");
+                          $controller   = new C_NhanVien();
+                          $controller->getQuanLyNhanVien(); 
                         ?>
                       </table>
                     </div>
