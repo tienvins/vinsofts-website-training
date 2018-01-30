@@ -181,7 +181,7 @@
             </nav>
           </div>
         </div>
-<?php require 'connect.php';?>
+
 
         <!-- /top navigation -->
 
@@ -248,10 +248,8 @@
 
 
                       <tbody>
-                        <?php
- 
-                          require '../Models/select.php';
-                    ?>
+                        
+                   
                      <?php
 
 
