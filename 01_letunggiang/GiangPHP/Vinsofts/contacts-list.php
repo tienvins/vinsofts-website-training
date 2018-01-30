@@ -10,14 +10,14 @@
     <title>Contact Form by Lê Tùng Giang</title>
 
     <!-- Bootstrap -->
-    <link href="lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="public/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
     <!-- <link href="nprogress/nprogress.css" rel="stylesheet"> -->
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="public/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -241,14 +241,14 @@
     </div>
 
     <!-- jQuery -->
-    <script src="lib/jquery/dist/jquery.min.js"></script>
+    <script src="public/lib/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
     <!-- <script src="fastclick/lib/fastclick.js"></script> -->
     <!-- NProgress -->
     <!-- <script src="nprogress/nprogress.js"></script> -->
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="public/build/js/custom.min.js"></script>
   </body>
 </html>
