@@ -15,7 +15,7 @@
                 <td class=" "><?php echo $key->MaPB ?></td>
                 <td class=" "><img src="public/images/<?php echo $key->Hinh ?>" alt="..." class="img-circle" width="128px" height="128px"></td>
                 <td class=" last"><a href='sua.php?MaNV=<?php echo $key->MaNV ?>'>Sửa</a>
-                <td class=" last"><a href='xoa.php?MaNV=<?=$manv ?>'>Xóa</a>
+                <td class=" last"><a href='xoa.php?MaNV=<?php echo $key->MaNV ?>'>Xóa</a>
                 </td>
             </tr>
         </tbody>

@@ -165,8 +165,8 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Giới tính</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                              <input type="radio" name="gender" value="male"> Nam 
-                              <input type="radio" name="gender" value="female"> Nữ
+                              <input type="radio" name="gender" value="Nam"> Nam 
+                              <input type="radio" name="gender" value="Nữ"> Nữ
                         </div>
                       </div>
                       <div class="form-group">
@@ -180,9 +180,11 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select name="mapb" class="mapb form-control col-md-7 col-xs-12">
-                            <option label="Web">1</option>
-                            <option label="Mobile">2</option>
-                            <option label="Marketting">3</option>
+                            <?php
+                              require_once("controllers/c_thongtin.php");
+                              $controller=new C_thongtin();
+                              $controller->getPhongBan();
+                            ?>
                           </select>
                         </div>
                       </div>

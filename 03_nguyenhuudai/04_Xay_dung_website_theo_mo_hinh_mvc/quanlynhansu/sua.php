@@ -1,3 +1,23 @@
+<?php
+  require_once("controllers/c_thongtin.php");
+  $id=$_GET['MaNV'];
+  $controller=new C_thongtin();
+  $tt=$controller->getNhanVienById($id);
+  if(isset($_POST['update'])){
+    $manv=$_POST['manv'];
+    $tennv=$_POST['name'];
+    $ngaysinh=$_POST['birthday'];
+    $diachi=$_POST['address'];
+    $gioitinh=$_POST['gender'];
+    $sdt=$_POST['phone'];
+    $mapb=$_POST['mapb'];
+    $anh=$_FILES['hinhanh']['tmp_name'];
+    $duongdan=$_FILES['hinhanh']['name'];
+    move_uploaded_file($anh, "public/images/".$duongdan);
+    $controller->editNhanVien($manv,$tennv,$ngaysinh,$diachi,$gioitinh,$sdt,$mapb,$duongdan);
+    header('location:quanly.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -26,7 +46,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Vinsofts</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Vinsofts</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -116,19 +136,97 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Chỉnh sửa thông tin nhân viên</h3>
+                <h3>Chỉnh sửa nhân viên</h3>
               </div>
             </div>
 
 
-            <?php
-              require_once("controllers/c_thongtin.php");
-              // Lấy id của mã nhân viên
-              // Gọi Controller lấy nhân viên theo id 
-              $id=$_GET['MaNV'];
-              $controller=new C_thongtin();
-              $tt=$controller->getNhanVienById($id);
-            ?>
+             <div class="row">
+              <div class="col-md-12">
+                <div class="form-them-moi">
+                    <form class="form-horizontal form-label-left" method="post" action="" enctype="multipart/form-data">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã nhân viên <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="manv" class="form-control col-md-7 col-xs-12" readonly="readonly" value="<?php echo $tt->MaNV ?>" >
+                        </div>
+                     </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Họ và tên <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" name="name" class="form-control col-md-7 col-xs-12" placeholder="Nhập họ và tên" value="<?php echo $tt->TenNV ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input class="date-picker form-control col-md-7 col-xs-12" type="date" name="birthday" value="<?php echo $tt->NgaySinh ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Quê quán</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input class="form-control col-md-7 col-xs-12" type="text" name="address" placeholder="Nhập quê quán" value="<?php echo $tt->QueQuan ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Giới tính</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                              <?php
+                                function checked($value, $v_compare){
+                                  if($value==$v_compare)
+                                      $rs =  'checked="checked"';
+                                  else
+                                      $rs = '';
+                                  return $rs;
+                                  }
+                              ?>
+                              <input type="radio" name="gender" value="Nam" <?php echo checked($tt->GioiTinh,'Nam') ?>> Nam 
+                              <input type="radio" name="gender" value="Nữ" <?php echo checked($tt->GioiTinh,'Nữ') ?>> Nữ
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Số điện thoại</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input class="form-control col-md-7 col-xs-12" type="text" name="phone" placeholder="Nhập số điện thoại" value="<?php echo $tt->SDT ?>">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã phòng ban <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <select name="mapb" class="mapb form-control col-md-7 col-xs-12">
+                            <option selected="selected"><?php echo $tt->MaPB ?></option>
+                            <?php
+                              require_once("controllers/c_thongtin.php");
+                              $controller=new C_thongtin();
+                              $controller->getPhongBan(); 
+                            ?>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Hình ảnh</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input class="form-control col-md-7 col-xs-12" type="file" name="hinhanh">
+                        </div>
+                      </div>
+
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button class="btn btn-primary" type="reset">Hủy</button>
+                          <button type="submit" class="btn btn-success" name="update">Chỉnh sửa</button>
+                        </div>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <!-- /page content -->
