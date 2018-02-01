@@ -1,12 +1,15 @@
-
-
 <?php
-class model_nhanvien
-{
-	public function getselect_all()
-	{
-		require  'connect.php';
-		$sql     = "SELECT * FROM dsnhanvien";
+  /**
+  * 
+  */
+  class edit
+  {
+  	
+  	function select($id)
+  	{
+  		 $id=$_GET['id'];
+  		require  'connect.php';
+		$sql     = "SELECT * FROM dsnhanvien WHERE id = $id";
 		
 		// $ket_qua = $conn->query($sql);
 		$ket_qua = mysqli_query($conn, $sql);
@@ -20,12 +23,9 @@ class model_nhanvien
 		if (!$ket_qua) {
 		    die("Không thể thực hiện câu lệnh SQL: " . $conn->connect_error);
 		    exit();
-		}
-	}
+		} 	
+  	}
+  }
 
-
-
-	
-		}  
 
 ?>
