@@ -1,7 +1,7 @@
 <?php
 	require_once("controllers/c_nhanvien.php");
 	$id=$_GET['MaNV'];
-	$controller=new C_NhanVien();
-	$tt=$controller->deleteNhanVien($id);
+	$nhanvien=new C_NhanVien();
+	$nhanvien->deleteNhanVien($id);
 	header('location:quanlynhanvien.php');
 ?>

@@ -10,8 +10,8 @@
     $duongdan = $_FILES['hinhanh']['name'];
     move_uploaded_file($anh, "public/images/".$duongdan);
     require_once("controllers/c_nhanvien.php");
-    $controller   = new C_NhanVien();
-    $controller->addNhanVien($tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
+    $nhanvien   = new C_NhanVien();
+    $nhanvien->addNhanVien($tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
     header('location:quanlynhanvien.php');
   }
 ?>
