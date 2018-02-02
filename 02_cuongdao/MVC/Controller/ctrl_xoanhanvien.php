@@ -7,9 +7,9 @@
 		  	
 		  	function getxoanhanvien()
 		  		
-		  	{	$id=$_GET['id'];
+		  	{	$id = $_GET['id'];
 		  		$bien = new delete();
-		  		$xoanhanvien = $bien->xoa_nhanvien($id);
+		  		$xoanhanvien = $bien -> xoa_nhanvien($id);
 
 		  	}
 		  }

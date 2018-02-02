@@ -1,18 +1,18 @@
 <?php
-include('./models/selectnv_id.php');
+include('./models/model_selectnv_id.php');
 
 class select_nhanvien
 {
-	 public function select_id()
+	 public function getselect_id()
 	{
-			$id=$_GET['id'];
+			$id  = $_GET['id'];
 			$abc = new edit();
-			$getnhanvien=$abc->select($id);
+			$getnhanvien = $abc->getselect($id);
 			// $modelnhanvien = $this->select_all();
 			
 			require_once("./Views/edit_nhanvien.php");
 	}
 }
 $nhanvien = new select_nhanvien();
-$nhanvien->select_id();
+$nhanvien -> getselect_id();
 ?>

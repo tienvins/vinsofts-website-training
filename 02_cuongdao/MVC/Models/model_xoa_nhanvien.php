@@ -3,13 +3,13 @@
 class delete
 {
 	
-	function xoa_nhanvien($id)
+	function getxoa_nhanvien($id)
 	{
-		$id=$_GET['id'];
+		$id = $_GET['id'];
 		include_once 'connect.php';
 				
 
-		$sql = "DELETE FROM dsnhanvien WHERE id=$id";
+		$sql = "DELETE FROM dsnhanvien WHERE id = $id";
 
 
 		if ($conn->query($sql) === TRUE) {
@@ -17,9 +17,6 @@ class delete
 			} else {
 			    echo "Error deleting record: " . $conn->error;
 			}
-
-		
-
 }
 }
 ?>

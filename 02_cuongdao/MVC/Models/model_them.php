@@ -5,7 +5,7 @@
 class add
 {
     
-    function themnhanvien()
+    function getthemnhanvien()
     {
       require 'connect.php';
 

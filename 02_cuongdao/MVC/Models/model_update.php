@@ -5,7 +5,7 @@
 class update
 {
 	
-	function updatenhanvien($id)
+	function getupdatenhanvien($id)
 	{
 		require 'connect.php';
 
