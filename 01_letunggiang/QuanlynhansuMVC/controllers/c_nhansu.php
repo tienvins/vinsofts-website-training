@@ -15,26 +15,26 @@ require_once('models/m_nhansu.php');
 		 	require_once 'views/show_table.php';
 		}
 		//gọi hàm lấy nhân sự theo id
-		function getIdNhansu(){
+		function getIdNhansu($id){
 			$this->model = new M_NhanSu();
-			return $model->get_nhansu();
+			return $model->get_nhansu($id);
 		}
 		// //gọi hàm thêm nhân sự
-		function addNhansu($name, $address, $phonenumber){
-			$this->model = new M_NhanSu();
-			$getNS = $model->add_nhansu($name, $address, $phonenumber);
-			// require_once 'views/show_table.php';
+		function getAddNhansu($name, $address, $phonenumber){
+			$model = new M_NhanSu();
+			return $model->add_nhansu($name, $address, $phonenumber);
 		}
-		// //gọi hàm sửa nhân sự
-		// function editNhansu($id, $name, $address, $phonenumber){
-		// 	$this->model = new M_NhanSu();
-		// 	$getNS = $model->edit_nhansu($id, $name, $address, $phonenumber);
-		// }
+		//gọi hàm sửa nhân sự
+		function getEditNhansu($name, $address, $phonenumber){
+			$this->model = new M_NhanSu();
+			return $model->edit_nhansu($name, $address, $phonenumber);
+		}
 		// //gọi hàm xóa nhân sự
-		// function deleteNhansu($id, $name, $address, $phonenumber){
-		// 	$this->model = new M_NhanSu();
-		// 	$getNS = $model ->delete_nhansu($id, $name, $address, $phonenumber);
-		// }
+		function deleteNhansu($id){
+			$model = new M_NhanSu();
+			$getNS = $model ->delete_nhansu($id);
+			// require_once('views/show_table');
+		}
 
 
 
