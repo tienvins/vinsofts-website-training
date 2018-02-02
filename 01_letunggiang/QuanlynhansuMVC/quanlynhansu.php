@@ -26,7 +26,7 @@
       <div class="col-md-3 left_col">
         <div class="left_col scroll-view">
           <div class="navbar nav_title" style="border: 0;">
-            <a href="contacts.php" class="site_title"><i class="fa fa-paw"></i> <span>Lê Tùng Giang</span></a>
+            <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Lê Tùng Giang</span></a>
           </div>
 
           <div class="clearfix"></div>
@@ -34,7 +34,7 @@
           <!-- menu profile quick info -->
           <div class="profile clearfix">
             <div class="profile_pic">
-              <img src="images/anhdaidien.jpg" alt="..." class="img-circle profile_img">
+              <img src="public/images/anhdaidien.jpg" alt="..." class="img-circle profile_img">
             </div>
             <div class="profile_info">
               <span>Welcome</span>
@@ -50,11 +50,11 @@
             <div class="menu_section">
               <h3>This is</h3>
               <ul class="nav side-menu">
-                <li><a href="contacts.php"><i class="fa fa-home"></i> Home </a></li>
+                <li><a href="index.php"><i class="fa fa-home"></i> Home </a></li>
                 <li><a><i class="fa fa-edit"></i> Quản Lý Nhân Sự <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                    <li><a href="contacts-list.php">Danh sách nhân sự</a></li>
-                    <li><a href="contacts-add.php">Thêm Nhân Sự</a></li>
+                    <li><a href="quanlynhansu.php">Danh sách nhân sự</a></li>
+                    <li><a href="themnhansu.php">Thêm Nhân Sự</a></li>
                   </ul>
                   
                 </li>
@@ -188,7 +188,7 @@
           <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
               <div class="x_title">
-                <h2><a href="contacts-add.php"><i class="fa fa-plus"> </i> Thêm nhân sự  </a></h2>
+                <h2><a href="themnhansu.php"><i class="fa fa-plus"> </i> Thêm nhân sự  </a></h2>
                 <ul class="nav navbar-right panel_toolbox">
                   <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                   </li>

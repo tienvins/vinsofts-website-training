@@ -26,7 +26,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="contacts.php" class="site_title"><i class="fa fa-paw"></i> <span>Lê Tùng Giang</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-paw"></i> <span>Lê Tùng Giang</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -50,7 +50,7 @@
               <div class="menu_section">
                 <h3>This is</h3>
                 <ul class="nav side-menu">
-                  <li><a href="contacts.php"><i class="fa fa-home"></i> Home</a>
+                  <li><a href="index.php"><i class="fa fa-home"></i> Home</a>
                     <ul class="nav child_menu">
                       <li><a href="index.html">Dashboard</a></li>
                       <li><a href="index2.html">Dashboard2</a></li>
@@ -59,8 +59,8 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Quản Lý Nhân Sự <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="contacts-list.php">Danh sách nhân sự</a></li>
-                      <li><a href="contacts-add.php">Thêm Nhân Sự</a></li>
+                      <li><a href="quanlynhansu.php">Danh sách nhân sự</a></li>
+                    <li><a href="themnhansu.php">Thêm Nhân Sự</a></li>
                     </ul>
                     
                   </li>
