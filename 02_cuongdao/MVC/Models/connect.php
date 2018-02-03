@@ -1,6 +1,5 @@
 <?php
-// Kiểm tra kết nối
-// Kết nối
+
 $host= "localhost";
 $username = "root";
 $password = "";

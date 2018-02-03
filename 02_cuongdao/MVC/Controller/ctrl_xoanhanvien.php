@@ -1,18 +1,8 @@
 <?php
 
-		 require './Models/xoa_nhanvien.php';
+		 include('ctrl_test.php');
 
-		  class xoanhanvien
-		  {
-		  	
-		  	function getxoanhanvien()
-		  		
-		  	{	$id = $_GET['id'];
-		  		$bien = new delete();
-		  		$xoanhanvien = $bien -> xoa_nhanvien($id);
-
-		  	}
-		  }
-		  $xoanhansu = new xoanhanvien();
+		  
+		  $xoanhansu = new Ctrl_nhanvien();
 		  $xoanhansu -> getxoanhanvien();
 ?>
