@@ -31,6 +31,7 @@ if (isset($_POST['add_nhansu']))
 
   <!-- Custom Theme Style -->
   <link href="public/build/css/custom.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="public/CSS/style.css" rel="stylesheet">
 </head>
 
 <body class="nav-md">
@@ -254,8 +255,7 @@ if (isset($_POST['add_nhansu']))
                           <div class="form-group">
                             <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
                               <button type="submit" class="btn btn-success"  name="add_nhansu">Submit</button>
-                              <button class="btn btn-primary" type="reset">Reset</button>
-                              <button class="btn btn-primary" type="button"></a>Cancel</button>
+                              <button class="btn btn-primary" type="button" onclick="location.href='quanlynhansu.php'">Cancel</button>
                             </div>
                           </div>
                         </form> 

@@ -12,7 +12,7 @@ class M_NhanSu extends database{
         return $query;
     }
 //Hàm lấy nhân sự theo ID
-    function get_nhansu($id)
+    function get_id_nhansu($id)
     {
         $this->connect_db();
         $sql = "select * from ql_nhansu where id = {$id}";
@@ -34,7 +34,7 @@ class M_NhanSu extends database{
     }
 
 // // Hàm sửa nhân sự
-    function edit_nhansu($name, $address, $phonenumber)
+    function edit_nhansu($id, $name, $address, $phonenumber)
     {
         $this->connect_db();
         $sql = "
@@ -42,10 +42,10 @@ class M_NhanSu extends database{
         name = '$name',
         address = '$address',
         phonenumber = '$phonenumber'
-        WHERE id = $id
+        WHERE id = '$id'
         ";
         $query = mysqli_query($this->conn, $sql); 
-        return $query;
+    
     }
 // // Hàm xóa nhân sự
     function delete_nhansu($id)
