@@ -1,26 +1,25 @@
 <?php
   require_once("controllers/c_nhanvien.php");
-  $id_nhanvien         = $_GET['MaNV'];
-  $nhanvien = new C_NhanVien();
-  $getnv_id=$nhanvien->getNhanVienById($id_nhanvien);
-  $duongdan   = $getnv_id->Hinh;
-  if(isset($_POST['update'])){
-    $manv     = $_POST['manv'];
-    $tennv    = $_POST['name'];
-    $ngaysinh = $_POST['birthday'];
-    $diachi   = $_POST['address'];
-    $gioitinh = $_POST['gender'];
-    $sdt      = $_POST['phone'];
-    $mapb     = $_POST['mapb'];
-    $anh      = $_FILES['hinhanh']['tmp_name'];
-    if($anh==null){
-      $duongdan=$getnv_id->Hinh;
+  $id_nhanvien    = $_GET['MaNV'];
+  $nhanvien       = new C_NhanVien();
+  $getnv_id       = $nhanvien->getNhanVienById($id_nhanvien);
+  if(isset($_POST['update'])) {
+    $manv       = $_POST['manv'];
+    $tennv      = $_POST['name'];
+    $ngaysinh   = $_POST['birthday'];
+    $diachi     = $_POST['address'];
+    $gioitinh   = $_POST['gender'];
+    $sdt        = $_POST['phone'];
+    $mapb       = $_POST['mapb'];
+    $anh        = $_FILES['hinhanh']['tmp_name'];
+    if($anh == null) {
+      $duongdan = $getnv_id->Hinh;
     }
-    else{
+    else {
       $duongdan = $_FILES['hinhanh']['name'];
     }
     move_uploaded_file($anh, "public/images/".$duongdan);
-    $controller->editNhanVien($manv, $tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
+    $nhanvien->editNhanVien($manv, $tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
     header('location:quanlynhanvien.php');
   }
 ?>
@@ -184,7 +183,7 @@
                           <!-- Hàm lấy lựa chọn giới tính sang sửa thông tin -->
                               <?php
                                 function checked($value, $v_compare){
-                                  if($value==$v_compare)
+                                  if($value == $v_compare)
                                       $rs =  'checked="checked"';
                                   else
                                       $rs = '';
@@ -209,7 +208,7 @@
                             <?php
                               require_once("controllers/c_nhanvien.php");
                               $nhanvien   = new C_NhanVien();
-                              $ds           = $nhanvien->getPhongBan();
+                              $ds         = $nhanvien->getPhongBan();
                                 foreach ($ds as $key ) {
                                   ?>
                                   <option value="<?php echo $key->MaPB ?>" <?php if($getnv_id->MaPB==$key->MaPB) echo "selected" ?> ><?php echo $key->TenPB ?></option>
