@@ -6,6 +6,6 @@ if(isset($_GET['MaNV'])){
 
 		$sql="DELETE From nhanvien Where MaNV='$MaNV'";
 		$result= mysqli_query($conn,$sql);
-		header('Location:index.php');
+		header('Location:trangchu.php');
 }
 ?>

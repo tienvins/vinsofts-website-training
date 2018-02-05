@@ -1,3 +1,23 @@
+<?php
+        // include ('controllers/c_nhanvien.php');
+        if (isset($_POST['add'])) {
+          # code...
+          
+          $HoTen = $_POST['HoTen'];
+          $MaPB = $_POST['MaPB'];
+          $ChucVu = $_POST['ChucVu'];
+          $GioiTinh = $_POST['GioiTinh'];
+          $Birth = $_POST['Birth'];
+          $DiaChi = $_POST['DiaChi'];
+          $Phone = $_POST['Phone'];
+          require_once('controllers/c_nhanvien.php');
+          $addnhanvien = new c_nhanvien();
+
+          $addnhanvien->addNhanVien($HoTen, $MaPB, $ChucVu, $GioiTinh, $Birth, $DiaChi, $Phone);
+           header('location:trangchu.php');
+        }
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +30,14 @@
     <title>Contact Form | Gentelella Alela! by Colorlib</title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -34,7 +54,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/avatar2.png" alt="..." class="img-circle profile_img">
+                <img src="public/images/avatar2.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Xin Chào,</span>
@@ -270,7 +290,7 @@
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
                       <li>
-                        <button  type="button" class="btn btn-primary btn-xs" > <i class="fa fa-undo"> </i> <a style="color: white" href="../production/index.php">  Back</a></button>  
+                        <button  type="button" class="btn btn-primary btn-xs" > <i class="fa fa-undo"> </i> <a style="color: white" href="../NhanSuMVC/trangchu.php">  Back</a></button>  
                       </li>
                        
                     </ul>
@@ -282,10 +302,10 @@
                     <form class="form-horizontal form-label-left" novalidate method="post">
                       <br>
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Họ và Tên <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="HoTen">Họ và Tên <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name"  required="required" type="text">
+                          <input id="HoTen" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="HoTen"  required="required" type="text">
                         </div>
                       </div>
                       <div class="item form-group">
@@ -355,30 +375,9 @@
           </div>
         </div>
 
-        <?php
-        include 'connect.php';
-        if (isset($_POST['add'])) {
-          # code...
-          
-          $name = $_POST['name'];
-          $MaPB = $_POST['MaPB'];
-          $ChucVu = $_POST['ChucVu'];
-          $GioiTinh = $_POST['GioiTinh'];
-          $Birth = $_POST['Birth'];
-          $DiaChi = $_POST['DiaChi'];
-          $Phone = $_POST['Phone'];
-
-          $sql = "INSERT into nhanvien VALUES 
-           ('$name','','$MaPB','$ChucVu','$GioiTinh','$Birth','$DiaChi','$Phone')";
-           $result = mysqli_query($conn,$sql);
-           header('Location:index.php');
-         
-        }
-
-
-         ?>
+    
         <!-- /page content -->
-
+        
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -391,15 +390,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="vendors/nprogress/nprogress.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="build/js/custom.min.js"></script>
   </body>
 </html>
