@@ -1,3 +1,25 @@
+<?php
+        include ('controller/c_nhanvien.php');
+        $id_nhanvien = $_GET['MaNV'];
+        $nhanvien = new c_nhanvien();
+        $getnv_id=$nhanvien->getNhanVienById($id_nhanvien);
+        if (isset($_POST['add'])) {
+          # code...
+          
+          $name = $_POST['name'];
+          $MaPB = $_POST['MaPB'];
+          $ChucVu = $_POST['ChucVu'];
+          $GioiTinh = $_POST['GioiTinh'];
+          $Birth = $_POST['Birth'];
+          $DiaChi = $_POST['DiaChi'];
+          $Phone = $_POST['Phone'];
+ 
+          $addnhanvien = new c_nhanvien();
+          $controller->editNhanVien($manv, $tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
+           header('location:index.php');
+        }
+        ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -10,14 +32,14 @@
     <title>Contact Form | Gentelella Alela! by Colorlib</title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -34,7 +56,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/avatar2.png" alt="..." class="img-circle profile_img">
+                <img src="public/images/avatar2.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Xin Chào,</span>
@@ -251,7 +273,10 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2> Thêm Nhân Viên </h2>
+                    <h2> Sửa Nhân Viên</h2>
+                      
+ 
+                  
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -266,7 +291,13 @@
                       </li>
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
+                      <li>
+                        <button  type="button" class="btn btn-primary btn-xs" > <i class="fa fa-undo"> </i> <a style="color: white" href="../NhanSuMVC/trangchu.php">  Back</a></button>  
+                      </li>
+                       
                     </ul>
+
+                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -346,29 +377,9 @@
           </div>
         </div>
 
-        <?php
-        include 'connect.php';
-        if (isset($_POST['add'])) {
-          # code...
-          
-          $name = $_POST['name'];
-          $MaPB = $_POST['MaPB'];
-          $ChucVu = $_POST['ChucVu'];
-          $GioiTinh = $_POST['GioiTinh'];
-          $Birth = $_POST['Birth'];
-          $DiaChi = $_POST['DiaChi'];
-          $Phone = $_POST['Phone'];
-
-          $sql = "INSERT into nhanvien VALUES 
-           ('$name','','$MaPB','$ChucVu','$GioiTinh','$Birth','$DiaChi','$Phone')";
-           $result = mysqli_query($conn,$sql);
-         
-        }
-
-
-         ?>
+    
         <!-- /page content -->
-
+        
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -381,15 +392,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="vendors/nprogress/nprogress.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="build/js/custom.min.js"></script>
   </body>
 </html>

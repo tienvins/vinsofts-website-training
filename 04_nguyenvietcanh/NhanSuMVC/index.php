@@ -10,14 +10,14 @@
     <title>Contact Form | Gentelella Alela! by Colorlib</title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="build/css/custom.min.css" rel="stylesheet">
     <script type="text/javascript">
       function deleteAction() {
         // body...
@@ -40,7 +40,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/avatar2.png" alt="..." class="img-circle profile_img">
+                <img src="public/images/avatar2.png" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Xin Chào,</span>
@@ -170,7 +170,7 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -182,7 +182,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -194,7 +194,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -206,7 +206,7 @@
                     </li>
                     <li>
                       <a>
-                        <span class="image"><img src="images/img.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="public/images/img.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>John Smith</span>
                           <span class="time">3 mins ago</span>
@@ -262,6 +262,28 @@
                     <div class="row">
                       <div class="col-md-1 col-sm-1 col-xs-1 text-left ">
                         <ul class="pagination pagination-split">
+                           <a class="btn btn-success"  href="/NhanSuMVC/them.php">Thêm</a> 
+                        </ul>
+                      </div>
+                      <div class="col-md-11 col-sm-11 col-xs-11 text-center">
+                        <ul class="pagination pagination-split">
+
+
+                          <li><a href="#">1</a></li>
+                          <li><a href="#">2</a></li>
+                          <li><a href="#">3</a></li>
+                          <li><a href="#">4</a></li>
+                          <li><a href="#">5</a></li>
+                          <li>...</li>
+                          <li><a href="#">10</a></li>
+                          <li><a href="#">11</a></li>
+                          <li><a href="#">12</a></li>
+                        
+                        </ul>
+                        <div class="clearfix"></div>
+                      </div>
+                      <div class="col-md-1 col-sm-1 col-xs-1 text-left ">
+                        <ul class="pagination pagination-split">
                            <a class="btn btn-success"  href="/QuanLy/production/them.php">Thêm</a> 
                         </ul>
                       </div>
@@ -292,56 +314,11 @@
                           $query= "select * from nhanvien";
                           $result = mysqli_query($conn,$query);
                           while ($row=mysqli_fetch_array($result)) {
-                          // $MaNV=$row['MaNV'];                            # code...
-                           ?>
+                          // $MaNV=$row['MaNV'];   
+                          }                         # code...
+                        ?>
 
-                            <div class="col-md-4 col-sm-4 col-xs-12 profile_details">
-                        <div class="well profile_view">
-                          <div class="col-sm-12">
-                            <h4 class="brief"><i><?php echo $row['ChucVu']; ?></i></h4>
-                            <div class="left col-xs-7">
-                              <h2><?php echo $row['HoTen']; ?></h2>
-                              <p><strong>Mã NV: </strong><?php echo $row['MaNV']; ?></p>
-                              <ul class="list-unstyled">
-                                <li><i class="fa fa-building"></i> Address: <?php echo $row['DiaChi']; ?></li>
-                                <li><i class="fa fa-phone"></i> Phone #: <?php echo $row['Phone']; ?> </li
-                              </ul>
-                            </div>
-                            <div class="right col-xs-5 text-center">
-                              <img src="images/img.jpg" alt="" class="img-circle img-responsive">
-                            </div>
-                          </div>
-                          <div class="col-xs-12 bottom text-center">
-                            <div class="col-xs-12 col-sm-6 emphasis">
-                              <p class="ratings">
-                                <a>4.0</a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star"></span></a>
-                                <a href="#"><span class="fa fa-star-o"></span></a>
-                              </p>
-                            </div>
-                            <div class="col-xs-12 col-sm-6 emphasis text-right">
-                              <form method="post">
-                                <button type="button" class="btn btn-primary btn-xs"> <i class="fa fa-retweet">
-                                </i> Sửa</button>
-                              <button type="button" name="delete"  class="btn btn-danger btn-xs">
-                                <i class="fa fa-minus"> </i> <a style="color: white" onclick="return deleteAction()" href="xoa.php?MaNV=<?php echo $row['MaNV'] ?>">Xóa</a>
-                              </button>
-                              </form>
-                            
-
-                              
-
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                           <?php
-                          }
-                       ?>
-    
+                        
 
                     </div>
                   </div>
@@ -364,15 +341,15 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="vendors/nprogress/nprogress.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="build/js/custom.min.js"></script>
   </body>
 </html>
