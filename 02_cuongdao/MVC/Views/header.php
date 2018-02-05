@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Gentelella Alela! | </title>
+    <title>Nhân viên Vinsoft  </title>
 
     <!-- Bootstrap -->
     <link href="library/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -26,7 +26,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Vinsofts!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -50,10 +50,10 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href=""><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="http://lrv.vn/mvc/index.php?controller=user&act=list"><i class="fa fa-home"></i> Danh sách nhân viên <span class="fa fa-chevron-down"></span></a>
                   
                   </li>
-                  <li><a href="http://lrv.vn/quanlynhanvien/themnhanvien.php"><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="http://lrv.vn/mvc/index.php?controller=user&act=add"><i class="fa fa-edit"></i> Thêm nhân viên  <span class="fa fa-chevron-down"></span></a>
                    
                   </li>
                   <li><a href="http://lrv.vn/quanlynhanvien/form1.php"><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>

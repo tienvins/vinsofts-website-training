@@ -219,8 +219,8 @@
                       <!-- Gọi tới controller show danh sách nhân viên -->
                       <?php
                         require_once("controllers/c_nhanvien.php");
-                        $controller   = new C_NhanVien();
-                        $controller->getDSNV(); 
+                        $nhanvien   = new C_NhanVien();
+                        $nhanvien->getDSNV(); 
                       ?>
                     </div>
                   </div>

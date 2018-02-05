@@ -1,26 +1,25 @@
 <?php
   require_once("controllers/c_nhanvien.php");
-  $id         = $_GET['MaNV'];
-  $controller = new C_NhanVien();
-  $tt=$controller->getNhanVienById($id);
-  $duongdan   = $tt->Hinh;
-  if(isset($_POST['update'])){
-    $manv     = $_POST['manv'];
-    $tennv    = $_POST['name'];
-    $ngaysinh = $_POST['birthday'];
-    $diachi   = $_POST['address'];
-    $gioitinh = $_POST['gender'];
-    $sdt      = $_POST['phone'];
-    $mapb     = $_POST['mapb'];
-    $anh      = $_FILES['hinhanh']['tmp_name'];
-    if($anh==null){
-      $duongdan=$tt->Hinh;
+  $id_nhanvien    = $_GET['MaNV'];
+  $nhanvien       = new C_NhanVien();
+  $getnv_id       = $nhanvien->getNhanVienById($id_nhanvien);
+  if(isset($_POST['update'])) {
+    $manv       = $_POST['manv'];
+    $tennv      = $_POST['name'];
+    $ngaysinh   = $_POST['birthday'];
+    $diachi     = $_POST['address'];
+    $gioitinh   = $_POST['gender'];
+    $sdt        = $_POST['phone'];
+    $mapb       = $_POST['mapb'];
+    $anh        = $_FILES['hinhanh']['tmp_name'];
+    if($anh == null) {
+      $duongdan = $getnv_id->Hinh;
     }
-    else{
+    else {
       $duongdan = $_FILES['hinhanh']['name'];
     }
     move_uploaded_file($anh, "public/images/".$duongdan);
-    $controller->editNhanVien($manv, $tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
+    $nhanvien->editNhanVien($manv, $tennv, $ngaysinh, $diachi, $gioitinh, $sdt, $mapb, $duongdan);
     header('location:quanlynhanvien.php');
   }
 ?>
@@ -155,27 +154,27 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Mã nhân viên <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="manv" class="form-control col-md-7 col-xs-12" readonly="readonly" value="<?php echo $tt->MaNV ?>" >
+                          <input type="text" name="manv" class="form-control col-md-7 col-xs-12" readonly="readonly" value="<?php echo $getnv_id->MaNV ?>" >
                         </div>
                      </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Họ và tên <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" name="name" class="form-control col-md-7 col-xs-12" placeholder="Nhập họ và tên" value="<?php echo $tt->TenNV ?>">
+                          <input type="text" name="name" class="form-control col-md-7 col-xs-12" placeholder="Nhập họ và tên" value="<?php echo $getnv_id->TenNV ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Ngày sinh <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input class="date-picker form-control col-md-7 col-xs-12" type="date" name="birthday" value="<?php echo $tt->NgaySinh ?>">
+                          <input class="date-picker form-control col-md-7 col-xs-12" type="date" name="birthday" value="<?php echo $getnv_id->NgaySinh ?>">
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Quê quán</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input class="form-control col-md-7 col-xs-12" type="text" name="address" placeholder="Nhập quê quán" value="<?php echo $tt->QueQuan ?>">
+                          <input class="form-control col-md-7 col-xs-12" type="text" name="address" placeholder="Nhập quê quán" value="<?php echo $getnv_id->QueQuan ?>">
                         </div>
                       </div>
                       <div class="form-group">
@@ -184,21 +183,21 @@
                           <!-- Hàm lấy lựa chọn giới tính sang sửa thông tin -->
                               <?php
                                 function checked($value, $v_compare){
-                                  if($value==$v_compare)
+                                  if($value == $v_compare)
                                       $rs =  'checked="checked"';
                                   else
                                       $rs = '';
                                   return $rs;
                                   }
                               ?>
-                              <input type="radio" name="gender" value="Nam" <?php echo checked($tt->GioiTinh,'Nam') ?>> Nam 
-                              <input type="radio" name="gender" value="Nữ" <?php echo checked($tt->GioiTinh,'Nữ') ?>> Nữ
+                              <input type="radio" name="gender" value="Nam" <?php echo checked($getnv_id->GioiTinh,'Nam') ?>> Nam 
+                              <input type="radio" name="gender" value="Nữ" <?php echo checked($getnv_id->GioiTinh,'Nữ') ?>> Nữ
                         </div>
                       </div>
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Số điện thoại</label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input class="form-control col-md-7 col-xs-12" type="text" name="phone" placeholder="Nhập số điện thoại" value="<?php echo $tt->SDT ?>">
+                          <input class="form-control col-md-7 col-xs-12" type="text" name="phone" placeholder="Nhập số điện thoại" value="<?php echo $getnv_id->SDT ?>">
                         </div>
                       </div>
                       <div class="form-group">
@@ -208,11 +207,11 @@
                           <select name="mapb" class="mapb form-control col-md-7 col-xs-12">
                             <?php
                               require_once("controllers/c_nhanvien.php");
-                              $controller   = new C_NhanVien();
-                              $ds           = $controller->getPhongBan();
+                              $nhanvien   = new C_NhanVien();
+                              $ds         = $nhanvien->getPhongBan();
                                 foreach ($ds as $key ) {
                                   ?>
-                                  <option value="<?php echo $key->MaPB ?>" <?php if($tt->MaPB==$key->MaPB) echo "selected" ?> ><?php echo $key->TenPB ?></option>
+                                  <option value="<?php echo $key->MaPB ?>" <?php if($getnv_id->MaPB==$key->MaPB) echo "selected" ?> ><?php echo $key->TenPB ?></option>
                                   <?php
                                  } 
                             ?>
@@ -223,7 +222,7 @@
                       <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Hình ảnh</label>
                         <div class="col-md-2 col-sm-6 col-xs-12">
-                          <img src="public/images/<?php echo $tt->Hinh ?>" alt="..." class="img-circle" width="128px" height="128px">
+                          <img src="public/images/<?php echo $getnv_id->Hinh ?>" alt="..." class="img-circle" width="128px" height="128px">
                         </div>
                         <div class="col-md-4 col-sm-6 col-xs-12">
                           <input class="form-control col-md-7 col-xs-12" type="file" name="hinhanh">
