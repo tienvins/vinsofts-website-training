@@ -8,11 +8,7 @@ if (isset($_POST['edit_nhansu']))
   $name       = $_POST['name'];
   $address       = $_POST['address'];
   $phonenumber       = $_POST['phonenumber'];
-<<<<<<< HEAD
-  $showedit->getEditNhansu($name, $address, $phonenumber);
-=======
   $showedit->getEditNhansu($id, $name, $address, $phonenumber);
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
         // Trở về trang danh sách
   header("location: quanlynhansu.php");
 }
@@ -24,11 +20,7 @@ if (isset($_POST['edit_nhansu']))
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<<<<<<< HEAD
-
-=======
   
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
   <title>Contact Form by Lê Tùng Giang</title>
 
   <!-- Bootstrap -->
@@ -36,12 +28,7 @@ if (isset($_POST['edit_nhansu']))
   <!-- Font Awesome -->
   <link href="public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- NProgress -->
-<<<<<<< HEAD
-=======
   <link rel="stylesheet" href="public/CSS/style.css">
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
-  <!-- <link href="nprogress/nprogress.css" rel="stylesheet"> -->
-
   <!-- Custom Theme Style -->
   <link href="public/build/css/custom.min.css" rel="stylesheet">
 </head>
@@ -241,81 +228,50 @@ if (isset($_POST['edit_nhansu']))
                 </div>
                 <div class="x_content">
                   <br/>
-
-                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="" method="POST">
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
-                      </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-<<<<<<< HEAD
-                        <input type="text" id="name" name="name" required="required" class="form-control col-md-7 col-xs-12">
-=======
-                        <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12" value="">
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="POST">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span>*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12">
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">Address <span class="required">*</span>
-                      </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-<<<<<<< HEAD
-                        <input type="text" id="Address" name="address" required="required" class="form-control col-md-7 col-xs-12">
-=======
-                        <input type="text" id="Address" name="address" class="form-control col-md-7 col-xs-12">
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">Address <span>*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="Address" name="address" class="form-control col-md-7 col-xs-12">
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">PhoneNumber</label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-<<<<<<< HEAD
-                        <input id="PhoneNumber" required="required"  class="form-control col-md-7 col-xs-12" type="text" name="phonenumber">
-=======
-                        <input id="PhoneNumber"  class="form-control col-md-7 col-xs-12" type="text" name="phonenumber">
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" >PhoneNumber</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="PhoneNumber"  class="form-control col-md-7 col-xs-12" type="text" name="phonenumber">
+                        </div>
                       </div>
-                    </div>
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-<<<<<<< HEAD
-                        <button type="submit" class="btn btn-success"  name="add_nhansu">Submit</button>
-                        <button class="btn btn-primary" type="reset">Reset</button>
-                        <button class="btn btn-primary" type="button"></a>Cancel</button>
-=======
-                        <button type="submit" class="btn btn-success"  name="edit_nhansu">Submit</button>
-                        <button class="btn btn-primary" type="button" onclick="location.href='quanlynhansu.php'">Cancel</button>
->>>>>>> 7fa5930bffe1b5923008c70a3eb374cdeb604dbc
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-success"  name="edit_nhansu">Submit</button>
+                          <button class="btn btn-primary" type="button" onclick="location.href='quanlynhansu.php'">Cancel</button>
+                        </div>
                       </div>
-                    </div>
-                  </form> 
+                    </form> 
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-       <!--  <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer> -->
-        <!-- /footer content -->
       </div>
-    </div>
 
-    <!-- jQuery -->
-    <script src="public/lib/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <!-- <script src="fastclick/lib/fastclick.js"></script> -->
-    <!-- NProgress -->
-    <!-- <script src="nprogress/nprogress.js"></script> -->
-    <!-- Custom Theme Scripts -->
-    <script src="public/build/js/custom.min.js"></script>
-  </body>
-  </html>
+      <!-- jQuery -->
+      <script src="public/lib/jquery/dist/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- FastClick -->
+      <!-- Custom Theme Scripts -->
+      <script src="public/build/js/custom.min.js"></script>
+    </body>
+    </html>
