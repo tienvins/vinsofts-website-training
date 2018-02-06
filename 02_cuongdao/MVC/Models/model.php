@@ -1,26 +1,40 @@
 <?php
-	include_once 'connect.php';	
-	class model
+include 'connect.php';
+	class model extends connect
 	{
+		
+		function getselect_all()
+		{
+			$sql     = "SELECT * FROM dsnhanvien";
+
+			$ket = mysqli_query($this->connect_db(), $sql);
+
+			return $ket;
+
+			if (!$ket) {
+				die("Không thể thực hiện câu lệnh SQL: " . $this->connect_db()->connect_error);
+				exit();
+			}
+		}
+
+	
 		function getxoa_nhanvien($id)
 		{	
 			
 			$id = $_GET['id'];
 				
 			$sql = "DELETE FROM dsnhanvien WHERE id = $id";
-			if ($conn->query($sql) === TRUE) 
+			if ($this -> connect_db()->query($sql) === TRUE) 
 			{
 				header('Location: http://lrv.vn/mvc/index.php?controller=user&act=list');} 
 				else {
-					echo "Error deleting record: " . $conn->error;
+					echo "Error deleting record: " . $this -> connect_db()->error;
 				}
 			}
+
 			function getupdatenhanvien($id)
 			{
-				require 'connect.php';
-
-
-
+				
 				$id = $_GET['id'];
 				$hoten = "";
 				$ngaysinh = "";
@@ -37,23 +51,24 @@
 
 
     
-					$sql = "
-					UPDATE dsnhanvien SET hoten = '$hoten', ngaysinh = '$ngaysinh', quequan = '$quequan', diachi = '$diachi' WHERE id = $id";
+					$sql = " UPDATE dsnhanvien SET hoten = '$hoten, ngaysinh = '$ngaysinh', quequan = '$quequan', diachi = '$diachi' WHERE id = $id";
 
-					if ($conn->query($sql) == TRUE) {
+					if ($this -> connect_db()->query($sql) == TRUE) 
+					{
 
 						header('Location: http://lrv.vn/mvc/index.php?controller=user&act=list');
-					} else {
+					} 
+					else
+					 {
 						echo "Error: " . $sql . "<br>" . $conn->error;
-					}}
+					  } 
+			}
 
-					$conn->close();
+					$this -> connect_db()->close();
 
 				}
 				function getthemnhanvien()
 				{
-					require 'connect.php';
-
 
 					$hoten = "";
 					$gioitinh = "";
@@ -73,23 +88,26 @@
 						$sql = "INSERT INTO dsnhanvien (hoten, gioitinh, ngaysinh, quequan, diachi ) 
 						VALUES ('$hoten','$gioitinh', '$ngaysinh','$quequan','$diachi')";
 
-						if ($conn->query($sql) === TRUE) {
+						if ($this -> connect_db()->query($sql) === TRUE) {
 							header('Location: http://lrv.vn/mvc/index.php?controller=user&act=list');
 						} else {
 							echo "Error: " . $sql . "<br>" . $conn->error;
-						}}
+						}
+					}
 
-						$conn->close();
+						$this -> connect_db()-> close();
 
 					}
+
 					function getselect($id)
 					{  
-						require  'connect.php';
+						
+
 					$id = $_GET['id'];
 
 					$sql     = "SELECT * FROM dsnhanvien WHERE id = $id";
 
-					$ket_qua = mysqli_query($conn, $sql);
+					$ket_qua = mysqli_query($this -> connect_db(), $sql);
 
 					return $ket_qua;
 
@@ -98,21 +116,7 @@
 						exit();
 					} 	
 				}
-				function getselect_all()
-				{
-					require  'connect.php';
-					$sql     = "SELECT * FROM dsnhanvien";
-
-					$ket_qua = mysqli_query($conn, $sql);
-
-					return $ket_qua;
-
-					if (!$ket_qua) {
-						die("Không thể thực hiện câu lệnh SQL: " . $conn->connect_error);
-						exit();
-					}
-				}
-
+				
 
 			}
 

@@ -1,6 +1,6 @@
 
 <?php
-include_once 'library/connect.php';
+include'library/connect.php';
 switch ($_GET['controller']) {
 case 'user': include 'Controller/user.php';
 		

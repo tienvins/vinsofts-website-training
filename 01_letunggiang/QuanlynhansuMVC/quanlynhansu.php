@@ -214,7 +214,8 @@
                       <th>Name</th>
                       <th>Address</th>
                       <th>PhoneNumber</th>
-                      <th>Option</th>
+                      <th>Sửa</th>
+                      <th>Xóa</th>
                     </tr>
                   </thead>
                   <tbody>

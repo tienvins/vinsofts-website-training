@@ -1,4 +1,4 @@
-      <?php require 'header.php';?>
+      <?php include 'header.php';?>
         <!-- /top navigation -->
 
         <!-- page content -->
@@ -26,7 +26,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Form thêm nhân viên </h2>
+                    <h2>Form Thêm nhân viên </h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -99,8 +99,9 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="send" type="submit" class="btn btn-success">Submit</button>
+                        <input type="reset" name="" class="btn btn-primary" value="Cancel"> 
+                        <input name="" id="send" type="submit" class="btn btn-success" value="Submit"> 
+                          
                         </div>
                       </div>
                     </form>
@@ -123,18 +124,17 @@
       </div>
     </div>
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="./library/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./library/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="./library/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="./library/vendors/nprogress/nprogress.js"></script>
     <!-- validator -->
-    <script src="vendors/validator/validator.js"></script>
+    <script src="./library/vendors/validator/validator.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
-  
+    <script src="./library/build/js/custom.min.js"></script>
   </body>
 </html>

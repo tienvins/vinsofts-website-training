@@ -27,7 +27,7 @@ require_once('models/m_nhansu.php');
 		//gọi hàm sửa nhân sự
 		function getEditNhansu($id, $name, $address, $phonenumber){
 			$model = new M_NhanSu();
-			$model->edit_nhansu($id, $name, $address, $phonenumber);
+			$getNS = $model->edit_nhansu($id, $name, $address, $phonenumber);
 		}
 		// //gọi hàm xóa nhân sự
 		function deleteNhansu($id){

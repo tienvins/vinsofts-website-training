@@ -29,8 +29,6 @@ if (isset($_POST['edit_nhansu']))
   <link href="public/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <!-- NProgress -->
   <link rel="stylesheet" href="public/CSS/style.css">
-  <!-- <link href="nprogress/nprogress.css" rel="stylesheet"> -->
-
   <!-- Custom Theme Style -->
   <link href="public/build/css/custom.min.css" rel="stylesheet">
 </head>
@@ -230,63 +228,50 @@ if (isset($_POST['edit_nhansu']))
                 </div>
                 <div class="x_content">
                   <br/>
-
-                  <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" action="" method="POST">
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span class="required">*</span>
-                      </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12" value="">
+                    <form id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" method="POST">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Name<span>*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="name" name="name" class="form-control col-md-7 col-xs-12">
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">Address <span class="required">*</span>
-                      </label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input type="text" id="Address" name="address" class="form-control col-md-7 col-xs-12">
+                      <div class="form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Address">Address <span>*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="text" id="Address" name="address" class="form-control col-md-7 col-xs-12">
+                        </div>
                       </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12">PhoneNumber</label>
-                      <div class="col-md-6 col-sm-6 col-xs-12">
-                        <input id="PhoneNumber"  class="form-control col-md-7 col-xs-12" type="text" name="phonenumber">
+                      <div class="form-group">
+                        <label for="middle-name" class="control-label col-md-3 col-sm-3 col-xs-12" >PhoneNumber</label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input id="PhoneNumber"  class="form-control col-md-7 col-xs-12" type="text" name="phonenumber">
+                        </div>
                       </div>
-                    </div>
-                    <div class="ln_solid"></div>
-                    <div class="form-group">
-                      <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                        <button type="submit" class="btn btn-success"  name="edit_nhansu">Submit</button>
-                        <button class="btn btn-primary" type="button" onclick="location.href='quanlynhansu.php'">Cancel</button>
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
+                          <button type="submit" class="btn btn-success"  name="edit_nhansu">Submit</button>
+                          <button class="btn btn-primary" type="button" onclick="location.href='quanlynhansu.php'">Cancel</button>
+                        </div>
                       </div>
-                    </div>
-                  </form> 
+                    </form> 
+                  </div>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
-        <!-- /page content -->
-
-        <!-- footer content -->
-       <!--  <footer>
-          <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
-          </div>
-          <div class="clearfix"></div>
-        </footer> -->
-        <!-- /footer content -->
       </div>
-    </div>
 
-    <!-- jQuery -->
-    <script src="public/lib/jquery/dist/jquery.min.js"></script>
-    <!-- Bootstrap -->
-    <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
-    <!-- FastClick -->
-    <!-- <script src="fastclick/lib/fastclick.js"></script> -->
-    <!-- NProgress -->
-    <!-- <script src="nprogress/nprogress.js"></script> -->
-    <!-- Custom Theme Scripts -->
-    <script src="public/build/js/custom.min.js"></script>
-  </body>
-  </html>
+      <!-- jQuery -->
+      <script src="public/lib/jquery/dist/jquery.min.js"></script>
+      <!-- Bootstrap -->
+      <script src="public/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+      <!-- FastClick -->
+      <!-- Custom Theme Scripts -->
+      <script src="public/build/js/custom.min.js"></script>
+    </body>
+    </html>

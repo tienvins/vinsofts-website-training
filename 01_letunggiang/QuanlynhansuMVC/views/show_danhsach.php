@@ -9,13 +9,13 @@
                               <h2><?php echo $item['name']; ?></h2>
                               <p><strong>About: </strong> Web Designer / UI. </p>
                               <ul class="list-unstyled">
-                                <li><i class="fa fa-building"></i> Address:<ny?php echo $item['address']; ?> </li>
+                                <li><i class="fa fa-building"></i> Address:<?php echo $item['address']; ?> </li>
                                 <li><i class="fa fa-phone"></i> Phone #:<?php echo $item['phonenumber']; ?> </li>
                               </ul>
                             </div>
-                            <div class="right col-xs-5 text-center">
+                           <!--  <div class="right col-xs-5 text-center">
                               <img src="images/anhdaidien.jpg" alt="" class="img-circle img-responsive">
-                            </div>
+                            </div> -->
                           </div>
                          <div class="col-xs-12 bottom text-center">
                             <div class="col-xs-12 col-sm-6 emphasis">
