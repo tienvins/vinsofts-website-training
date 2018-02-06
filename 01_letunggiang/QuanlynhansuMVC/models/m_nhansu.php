@@ -12,20 +12,17 @@ class M_NhanSu extends database{
         return $query;
     }
 //Hàm lấy nhân sự theo ID
-    function get_nhansu($id)
+    function get_id_nhansu($id)
     {
         $this->connect_db();
         $sql = "select * from ql_nhansu where id = {$id}";
         $query = mysqli_query($this->conn, $sql);
-        return $result;
+        return $query;
     }
 // //hàm thêm nhân sự
     function add_nhansu($name, $address, $phonenumber)
     {
         $this->connect_db();
-        $name = addslashes($name);
-        $address = addslashes($address);
-        $phonenumber = addslashes($phonenumber);
 
         $sql = "
         INSERT INTO ql_nhansu(name, address, phonenumber) VALUES
@@ -37,37 +34,31 @@ class M_NhanSu extends database{
     }
 
 // // Hàm sửa nhân sự
-//     function edit_nhansu($id, $name, $address, $phonenumber)
-//     {
-//         global $conn;
-//         connect_db();
-//         $name       = addslashes($name);
-//         $address        = addslashes($address);
-//         $phonenumber   = addslashes($phonenumber);
-
-//         $sql = "
-//         UPDATE ql_nhansu SET
-//         name = '$name',
-//         address = '$address',
-//         phonenumber = '$phonenumber'
-//         WHERE id = $id
-//         ";
-//         $query = mysqli_query($conn, $sql);  
-//         return $query;
-//     }
+    function edit_nhansu($id, $name, $address, $phonenumber)
+    {
+        $this->connect_db();
+        $sql = "
+        UPDATE ql_nhansu SET
+        name = '$name',
+        address = '$address',
+        phonenumber = '$phonenumber'
+        WHERE id = '$id'
+        ";
+        $query = mysqli_query($this->conn, $sql); 
+    
+    }
 // // Hàm xóa nhân sự
-//     function delete_nhansu($id)
-//     {
-//         global $conn;
-//         connect_db();
-//     // Câu truy sửa
-//         $sql = "
-//         DELETE FROM ql_nhansu
-//         WHERE id = $id
-//         ";
-//         $query = mysqli_query($conn, $sql);
-//         return $query;
-//     } 
+    function delete_nhansu($id)
+    {
+       $this->connect_db();
+    // Câu truy sửa
+        $sql = "
+        DELETE FROM ql_nhansu
+        WHERE id = $id
+        ";
+        $query = mysqli_query($this->conn, $sql); 
+        return $query;
+    } 
 }
 
 ?>	

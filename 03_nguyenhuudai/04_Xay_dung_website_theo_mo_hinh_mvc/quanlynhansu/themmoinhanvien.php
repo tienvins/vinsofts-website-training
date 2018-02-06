@@ -1,5 +1,5 @@
 <?php
-  if(isset($_POST['add_new'])){
+  if(isset($_POST['add_new'])) {
     $tennv    = $_POST['name'];
     $ngaysinh = $_POST['birthday'];
     $diachi   = $_POST['address'];
