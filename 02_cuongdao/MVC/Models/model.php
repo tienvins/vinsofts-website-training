@@ -51,7 +51,7 @@ include 'connect.php';
 
 
     
-					$sql = " UPDATE dsnhanvien SET hoten = '$hoten, ngaysinh = '$ngaysinh', quequan = '$quequan', diachi = '$diachi' WHERE id = $id";
+					$sql = " UPDATE dsnhanvien SET hoten = '$hoten', ngaysinh = '$ngaysinh', quequan = '$quequan', diachi = '$diachi' WHERE id = $id";
 
 					if ($this -> connect_db()->query($sql) == TRUE) 
 					{
@@ -60,7 +60,7 @@ include 'connect.php';
 					} 
 					else
 					 {
-						echo "Error: " . $sql . "<br>" . $conn->error;
+						echo "Error: " . $sql . "<br>" . $this -> connect_db()->error;
 					  } 
 			}
 
