@@ -1,0 +1,19 @@
+*{
+	margin: 0; 
+	padding: 0px;
+	font-family: roboto;
+}
+h1,h2,h3,h4,h5,h6,ul,li,p{margin: 0px; padding: 0px;}
+.row{
+	margin: 0px;
+	padding: 0px;
+}
+
+.img{
+	text-align: center;
+	padding-left: 100px;
+}
+.btn-primary{
+	background-color: #00a2ed;
+    border-color: #00a2ed
+}
