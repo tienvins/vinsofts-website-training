@@ -1,5 +1,5 @@
 	<?php
-	require_once './models/model.php';
+	include './models/model.php';
 	class Ctrl_nhanvien
 	{
 		

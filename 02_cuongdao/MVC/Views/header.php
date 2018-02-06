@@ -34,7 +34,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="./library/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -56,9 +56,6 @@
                   <li><a href="http://lrv.vn/mvc/index.php?controller=user&act=add"><i class="fa fa-edit"></i> Thêm nhân viên  <span class="fa fa-chevron-down"></span></a>
                    
                   </li>
-                  <li><a href="http://lrv.vn/quanlynhanvien/form1.php"><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
-                  
-                
                  
                 </ul>
               </div>

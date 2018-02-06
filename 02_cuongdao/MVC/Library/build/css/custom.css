@@ -1097,7 +1097,7 @@ h2 {
     padding: 0 5px 6px;
     position: relative;
     width: 100%;
-   
+    float: left;
     clear: both;
     margin-top: 5px
 }
@@ -3474,7 +3474,7 @@ a.hiddenanchor {
 form:after {
     content: ".";
     display: block;
-    height: 32px;
+    height: 0;
     clear: both;
     visibility: hidden
 }

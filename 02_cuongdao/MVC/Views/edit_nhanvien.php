@@ -1,4 +1,4 @@
-      <?php require 'header.php';?>
+      <?php include 'header.php';?>
         <!-- /top navigation -->
      <?php 
      ($row = $getnhanvien->fetch_array(MYSQLI_ASSOC)) ?>
@@ -57,7 +57,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Họ Tên <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="name" class="form-control col-md-7 col-xs-12"  name="ten" placeholder="" required="required" type="text" value=" <?php echo $row['hoten'] ?>">
+                          <input id="name" class="form-control col-md-7 col-xs-12"  name="ten" required="required" type="text" value="<?php echo $row['hoten']?>">
                         </div>
                       </div>
                        
@@ -73,14 +73,14 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Quê Quán <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="" name="quequan" data-validate-linked="email"  class="form-control col-md-7 col-xs-12" value=" <?php echo $row['quequan'] ?>">
+                          <input type="text" id="" name="quequan" data-validate-linked="email"  class="form-control col-md-7 col-xs-12" value="<?php echo $row['quequan'] ?>">
                         </div>
                       </div>
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="number">Địa Chỉ <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="diachi" name="diachi" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12" value=" <?php echo $row['diachi'] ?>">
+                          <input type="text" id="diachi" name="diachi" required="required" data-validate-minmax="10,100" class="form-control col-md-7 col-xs-12" value="<?php echo $row['diachi'] ?>">
                         </div>
 
                       </div>
@@ -90,8 +90,9 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button id="send" type="submit" class="btn btn-success">Submit</button>
+                        <input type="reset" name="" class="btn btn-primary" value="Cancel"> 
+                        <input name="" id="send" type="submit" class="btn btn-success" value="Submit"> 
+                          
                         </div>
                       </div>
                     </form>
@@ -114,18 +115,18 @@
       </div>
     </div>
 
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="./library/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./library/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="./library/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="./library/vendors/nprogress/nprogress.js"></script>
     <!-- validator -->
-    <script src="vendors/validator/validator.js"></script>
+    <script src="./library/vendors/validator/validator.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
+    <script src="./library/build/js/custom.min.js"></script>
   
   </body>
 </html>
