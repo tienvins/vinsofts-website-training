@@ -40,6 +40,7 @@ class IndexControllers {
         require_once '../view/addnew.php';
     }
     public function CreateAction($data) {
+//        var_dump($data);die;
         if (empty($_FILES['fileToUpload']['name'])) {
             $this->index_model->InsertUserModel($data);
             $data = $this->index_model->index();
@@ -47,8 +48,10 @@ class IndexControllers {
         }
         else {
             $upload = UploadImage( $_FILES);
+
             if ($upload ==1) {
-                $this->index_model->InsertUser($data, $_FILES);
+                $this->index_model->insertUser($data, $_FILES);
+//                var_dump($data);die;
                 $data = $this->index_model->index();
                 require_once '../view/index.php';
             }

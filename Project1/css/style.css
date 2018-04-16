@@ -99,10 +99,12 @@ background: rgba(193,198,204,0.93);
     font-size: 18px;
     display: none;
     padding: 20px;
+    z-index: 9999;
     font-family: 'Oswald', sans-serif;
     border-radius: 10px;
 }
 .closeeeee {
+    z-index: 9999;
     display: none;
     color: white;
 }

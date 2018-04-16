@@ -58,7 +58,7 @@
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Date_of_birth</div>
-                        <input class='col-sm-4' name='date_of_birth' value='<?= $value['date_of_birth'] ?>'>
+                        <input class='col-sm-4' type="date" name='date_of_birth' value='<?= $value['date_of_birth'] ?>'>
                         <div class="prd" id="error-date"></div>
                     </div>
                     <div class='col-sm-12 row_edit'>
@@ -73,12 +73,12 @@
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Leave_days</div>
-                        <input class='col-sm-4' name= 'leave_days' value='<?= $value['leave_days'] ?>'>
+                        <input class='col-sm-4' type="number" name= 'leave_days' value='<?= $value['leave_days'] ?>'>
                         <div class="prd" id="error-leave"></div>
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Team_id</div>
-                        <input class='col-sm-4' name ='team_id' value='<?= $value['team_id'] ?>'>
+                        <input class='col-sm-4' type="number" name ='team_id' value='<?= $value['team_id'] ?>'>
                         <div class="prd" id="error-team"></div>
                     </div>
                     <div class='col-sm-12 row_edit fm-stt'>
@@ -99,12 +99,12 @@
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Hobby</div>
-                        <input class='col-sm-4' name='hobby' value='<?= $value['hobby'] ?>'>
+                        <input class='col-sm-4' type="number" name='hobby' value='<?= $value['hobby'] ?>'>
                         <div id="error-hobby"></div>
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Salary</div>
-                        <input class='col-sm-4' name='salary' value='<?= $value['salary'] ?>'>
+                        <input class='col-sm-4' type="number" name='salary' value='<?= $value['salary'] ?>'>
                         <div class="prd" id="error-salary"></div>
                     </div>
                     <button style="margin-left: 250px;margin-top: 30px" type='submit' class='btn btn-success' id="btn-request">Submit</button>

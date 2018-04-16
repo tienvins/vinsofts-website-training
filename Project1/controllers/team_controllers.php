@@ -20,9 +20,35 @@ class TeamControllers {
         $data = $this->team_model->ListTeam();
         require_once '../view/team/team.php';
     }
-    public function EditUserAction($data) {
-        $data = $this->team_model->EditUserById($data);
-        require_once '../view/team/edituser.php';
+    public function EditTeamAction($data) {
+//        var_dump($data);die;
+        $data2 = $this->team_model->EditTeamById($data['id']);
+//        var_dump($data2);die;
+        require_once '../view/team/editteam.php';
+    }
+    public function UpdateTeamByIdAction($data) {
+//        var_dump($data);die;
+//        var_dump($data['id']);die;
+//        $data2 = $this->team_model->UpdateModel($data);
+        if (empty($_FILES['fileToUpload']['name'])) {
+//            var_dump($data2);die;
+            $this->team_model->UpdateTeamModel($data);
+            $data = $this->team_model->ListTeam();
+            require_once '../view/team/team.php';
+        }
+        else {
+            $upload = UploadImageTeam($data,$_FILES);
+            if ($upload ==1) {
+//                var_dump($_FILES['fileToUpload']['name']);die;
+                $this->team_model->UpdateTeamModel2($data, $_FILES['fileToUpload']['name']);
+                $data = $this->team_model->ListTeam();
+                require_once '../view/team/team.php';
+            }
+            else {
+                echo "sai luon";
+            }
+        }
+        require_once '../view/team/team.php';
     }
     public function listAction() {
        echo "hung";
@@ -50,6 +76,12 @@ class TeamControllers {
             echo "sai luon";
         }
     }
+    public function DeleteByIdAction($id) {
+//        var_dump($id['id']);die;
+        $this->team_model->DeleteTeamByIdModel($id['id']);
+        $data = $this->team_model->ListTeam();
+        require_once '../view/team/team.php';
+    }
 //    public function CreateAction($data) {
 ////        var_dump($data);die;
 //        if (empty($_FILES['fileToUpload']['name'])) {
@@ -70,11 +102,11 @@ class TeamControllers {
 //            }
 //
 //        }
-//
-////        $data2 = $this->index_model->insertNewUser($data);
-////        $data = $this->index_model->index();
-////        require_once '../view/index.php';
-//
+
+//        $data2 = $this->index_model->insertNewUser($data);
+//        $data = $this->index_model->index();
+//        require_once '../view/index.php';
+
 //    }
     public function UpdateAction($data2) {
 //        var_dump($data2);die;
@@ -135,11 +167,14 @@ switch ($action){
     case 'deleteUser';
         $admin->DeleteUserAction($_REQUEST);
         break;
-    case 'editUser';
-        $admin->EditUserAction($_REQUEST);
+    case 'edit';
+        $admin->EditTeamAction($_REQUEST);
         break;
     case 'update';
-        $admin->UpdateAction($_REQUEST);
+        $admin->UpdateTeamByIdAction($_REQUEST);
+        break;
+    case 'delete';
+        $admin->DeleteByIdAction($_REQUEST);
         break;
     default ;
         $admin->listAction();

@@ -17,10 +17,10 @@ class TeamModel extends DB
 //        return $result;
 //    }
 //
-    public function DeleteUser($id)
+    public function DeleteTeamByIdModel($id)
     {
 //        var_dump($id);die;
-        $query = 'Delete From users where id='.$id['id'].'';
+        $query = 'Delete From teams where id='.$id['id'].'';
 //        var_dump($query);die;
         $result = $this->deleteQuery($query);
         return $result;
@@ -30,14 +30,38 @@ class TeamModel extends DB
         $result = $this->executeQuery($query);
         return $result;
     }
-    public function EditUserById($id)
+    public function EditTeamById($id)
     {
 //        var_dump($id['id']);die;
-        $query = 'SELECT * FROM users where id = '.$id['id'].'';
+        $query = 'SELECT * FROM teams where id = '.$id['id'].'';
         $result = $this->executeQuery($query);
 //        var_dump($result);die;
         return $result;
     }
+    public function UpdateTeamModel($data)
+    {
+//        var_dump($data);die;
+        $query = 'UPDATE teams set name = "'.$data['name-team'].'" ,description = "'.$data['description'].'" where id='.$data['id'].'';
+        $result = $this->updateQuery($query);
+//        var_dump($query);die;
+        return $result;
+    }
+    public function UpdateTeamModel2($data,$file)
+    {
+
+        $query = 'UPDATE teams set name = "'.$data['name-team'].'" ,logo ="'.$file.'", description = "'.$data['description'].'" where id='.$data['id'].'';
+        $result = $this->updateQuery($query);
+//        var_dump($query);die;
+        return $result;
+    }
+//    public function Update1($data,$_FILES)
+//    {
+////        var_dump($data);die;
+//        $query = 'UPDATE teams set name = "'.$data['name'].'" ,description = "'.$data['description'].'" where id='.$data['id'].'';
+//        $result = $this->updateQuery($query);
+////        var_dump($query);die;
+//        return $result;
+//    }
 //    public function EditControllers($id)
 //    {
 ////        var_dump($id['id']);die;

@@ -9,6 +9,7 @@
           <div class="row">
 <!--              <div class="col-sm-12" >Các phòng ban trong công ty</div>-->
               <div class="row" style="position: relative">
+                  <div style="margin-left: 56px" class="col-sm-12 btn-1 "><a href="../controllers/team_controllers.php?action=addnewTeam"><button class="btn btn-success">Add New Team </button></a></div>
                   <?php
 
                     foreach ($data as $key=>$value) {
@@ -19,13 +20,16 @@
                                 <img class="col-sm-6 " src="../images/team/<?php echo $value['logo'] ?>">
                                 <div class="col-sm-6 seting-team" style="padding-left: 100px">
                                     <div class="col-sm-12 btn-1"><a href="../controllers/team_controllers.php?action=list&id=<?php echo $value['id'] ?>"><button class="btn btn-info btn-1 color">Show User</button></a></div>
-                                    <div class="col-sm-12 btn-1 "><a href="../controllers/team_controllers.php?action=addnew"><button class="btn btn-info btn-1 color"> Add New </button></a></div>
+                                    <div class="col-sm-12 btn-1 "><a href="../controllers/index_controllers.php?action=addnew"><button class="btn btn-info btn-1 color">Add New </button></a></div>
                                     <div class="col-sm-12 btn-1 a<?php echo $value['id']?>">
                                         <button class="btn btn-info btn-1">Description</button>
                                         <div class="content-data-show" id="content-data-show<?php echo $value['id']?>">
                                             <p class=" "><?php echo $value['description']?></p>
                                         </div>
-
+                                    </div>
+                                    <div class="" style="float: right">
+                                        <div class="col-sm-6 "><a href="../controllers/team_controllers.php?action=edit&id=<?php echo $value['id'] ?>"><button class="btn btn-warning"><i class="fa fa-pencil"></i></button></a></div>
+                                        <div class="col-sm-6 "><a href="../controllers/team_controllers.php?action=delete&id=<?php echo $value['id'] ?>"><button class="btn btn-danger" ><i class="fa fa-trash"></i></button></a></div>
                                     </div>
                                 </div>
                             </div>

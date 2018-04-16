@@ -78,11 +78,11 @@ class IndexModel extends DB
             return $result;
     }
     public function insertUser($data, $a){
-
+//var_dump($data['gender']);die;
 //        var_dump($a['fileToUpload']['name']);die;
         $query = 'INSERT INTO `users`(`name`, `email`, `password`,`email_personal`,`image`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `leave_days`,`team_id`,`status`,`language_skills`,`hobby`,`salary`)
                    VALUE ("' . $data["name"] . '", "' . $data["email"] . '","' . sha1($data["password"]) . '", "' . $data["email_personal"] . '","' . $a['fileToUpload']['name'] . '", "' . $data["gender"] . '", "' . $data["date_of_birth"] . '", "' . $data["phone_number"] . '", "' . $data["current_address"] . '", "' . $data["leave_days"] . '", "' . $data["team_id"] . '", "' . $data["status"] . '", "' . $data["language_skills"] . '", "' . $data["hobby"] . '", "' . $data["salary"] . '")';
-        var_dump($query);die;
+//        var_dump($query);die;
         $result = $this->insertNew($query);
 
         return $result;

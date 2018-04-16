@@ -7,7 +7,7 @@ class MenuControllers {
 
     public function __construct() {
         $this->index_model = new IndexModel();
-        
+//        require_once '../view/login.php';
     }
 
     public function IndexDesktop() {

@@ -41,19 +41,19 @@
                                 <input class='col-sm-4' type='file' name ='fileToUpload'><br>
 
                           </div>
-                           <div class='col-sm-12 row_edit'>
-                               <div class='col-sm-1'>Gender</div>
-                               <div class="col-sm-2">
-                                   <input name = 'gender' type='radio' value='1'  >
-                                   <label>Nam</label>
-                                   <input name = 'gender' type='radio' value='2'  style='margin-left: 20px'>
-                                   <label>Nữ </label>
-                               </div>
+                            <div class='col-sm-12 row_edit fm-stt'>
+                                <div class='col-sm-1'>Gender</div>
+                                <div class="col-sm-2">
+                                    <input name = 'gender' type='radio' value='1'  >
+                                    <label>Nam </label>
+                                    <input name = 'gender' type='radio' value='2'  style='margin-left: 20px'>
+                                    <label>Nữ </label>
+                                </div>
                                <div class="col-sm-4 prd" id="error-gender">Phần bắt buộc</div>
                           </div>
                            <div class='col-sm-12 row_edit'>
                                 <div class='col-sm-1'>Date_of_birth</div>
-                                <input class='col-sm-4' name='date_of_birth' value=''>
+                                <input type="date" class='col-sm-4' name='date_of_birth' value=''>
                                <div class="prd" id="error-date"></div>
                           </div>
                            <div class='col-sm-12 row_edit'>
@@ -73,7 +73,7 @@
                           </div>
                           <div class='col-sm-12 row_edit'>
                                 <div class='col-sm-1'>Team_id</div>
-                                <input class='col-sm-4' name ='team_id' value=''>
+                                <input type="number" class='col-sm-4' name ='team_id' value=''>
                               <div class="prd" id="error-team"></div>
                           </div>
                           <div class='col-sm-12 row_edit fm-stt'>
@@ -94,15 +94,15 @@
                           </div>
                           <div class='col-sm-12 row_edit'>
                                 <div class='col-sm-1'>Hobby</div>
-                                <input class='col-sm-4' name='hobby' value=''>
+                                <input type="number" class='col-sm-4' name='hobby' value=''>
                               <div id="error-hobby"></div>
                           </div>
                           <div class='col-sm-12 row_edit'>
                                 <div class='col-sm-1'>Salary</div>
-                                <input class='col-sm-4' name='salary' value=''>
+                                <input type="number" class='col-sm-4' name='salary' value=''>
                               <div class="prd" id="error-salary"></div>
                           </div>
-                           <button style="margin-left: 250px;margin-top: 30px" type='submit' class='btn btn-success' id="btn-request">Submit</button>
+                           <button style="margin-left: 250px;margin-top: 30px" type='submit' class='btn btn-success' id="btn-request" >Submit</button>
                         </form>
             <div class="col-md-12 col-sm-12 col-xs-12">
             </div>
