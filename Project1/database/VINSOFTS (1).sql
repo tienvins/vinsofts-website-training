@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 16, 2018 at 12:47 PM
+-- Generation Time: Apr 18, 2018 at 05:49 PM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.2.4-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -40,7 +40,6 @@ CREATE TABLE `teams` (
 INSERT INTO `teams` (`id`, `name`, `description`, `logo`) VALUES
 (2, 'Marketing', 'Hoạt động hướng tới khách hàng nhằm thỏa mãn nhu cầu và mong muốn của họ thông qua quá trình tiếp thị sản phẩm, phát triển thương hiệu', 'marketing.png'),
 (3, 'Job Manager', 'Khai thác và sử dụng nguồn nhân lực của một tổ chức hay một công ty một cách hợp lý và hiệu quả', 'JobManager.png'),
-(4, 'Department of Planning', 'Lên kế hoạch cho nhhững hoạt động, công việc được sắp xếp theo trình tự nhất định để đạt được mục tiêu đã đề ra', 'kehoach.jpeg'),
 (5, 'Accounting', 'Xác định, ghi chép, tổng hợp và báo cáo các thông tin kinh tế trong công ty.', 'ketoan.png'),
 (6, 'Web', 'Tạo các ứng dụng trên web', 'web.jpg'),
 (9, 'Mobie', 'Thiết kế các ứng dụng trên điện thoại', 'mobie.png');
@@ -68,24 +67,22 @@ CREATE TABLE `users` (
   `language_skills` text COLLATE utf8_unicode_ci NOT NULL,
   `leave_days` float NOT NULL,
   `team_id` int(10) NOT NULL,
-  `status` tinyint(4) NOT NULL
+  `status` tinyint(4) NOT NULL,
+  `confirm_password` varchar(255) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `salary`, `hobby`, `language_skills`, `leave_days`, `team_id`, `status`) VALUES
-(2, 'Tran viet hung', 'hunghamhoc101@gmail.', 'hung@gmail.com', '12345', NULL, NULL, 2, '1992-03-11', 53432131, 'THPT Ninh Giang', 5000000, '11', 'ko co11', 10, 1, 2),
-(5, '1', 'tes4@gmail.com', 'tes4@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', NULL, NULL, 1, '1992-03-24', 1675211855, 'dfsa', 2, '1', 'asdf', 2, 2, 1),
-(6, 'test4', 'tes4@gmail.com1', 'tranviethun@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', NULL, NULL, 1, '1992-03-27', 1675211855, 'dfsa', 2, '1', 'asdf', 1, 2, 1),
-(7, 'test4', 'tes4@gmail.com11', 'tes4@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', NULL, 'hung.jpeg', 1, '1992-03-27', 1675211855, 'dfsa', 2, '1', 'asdf', 1, 2, 2),
-(9, 'nguyen anh tuan', 'nguyenanhuan@gmail.com', 'nguyentuananh@gmail.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', NULL, NULL, 2, '1992-03-11', 53432131, 'THPT Ninh Giang', 5000000, '11', 'china', 10, 2, 1),
-(12, 'fasdfasdf', 'asdfasdfasdf@gmail.com', 'tes4@gmail.com', '7110eda4d09e062aa5e4a390b0a572ac0d2c0220', NULL, 'team.png', 1, '1992-03-27', 1675211855, 'dfsa', 2, '1', 'asdf', 1, 2, 1),
-(13, 'hung', 'hunghamhoc101@gmail.com1', 'hung@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', NULL, NULL, 1, '1992-03-11', 53432131, 'THPT Ninh Giang', 5000000, '11', 'ko co11', 10, 1, 1),
-(14, 'Cảnh', 'canh@gmail.com', 'canh@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '49edd00c_78523557_49e02cf6_340d079c_48077b66_anh20dep201.jpg', 1, '1992-04-04', 53432131, 'THPT Ninh Giang', 5000000, '11', 'ko co11', 10, 1, 1),
-(15, 'Đức Cảnh', 'canh@gmail.com', 'canh@gmail.com', '7c4a8d09ca3762af61e59520943dc26494f8941b', NULL, '49edd00c_78523557_49e02cf6_340d079c_48077b66_anh20dep201.jpg', 1, '1992-04-04', 53432131, 'THPT Ninh Giang', 5000000, '11', 'ko co11', 10, 1, 1),
-(16, 'a tien', 'atien123@gmail.com', 'atien123@gmail.com', '8cb2237d0679ca88db6464eac60da96345513964', NULL, 'user1.png', 1, '1345-01-02', 1323465798, 'THPT Ninh Giang', 5000000, '11', 'ko co11', 10, 1, 1);
+INSERT INTO `users` (`id`, `name`, `email`, `email_personal`, `password`, `remember_token`, `image`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `salary`, `hobby`, `language_skills`, `leave_days`, `team_id`, `status`, `confirm_password`) VALUES
+(38, 'hung', 'hunghamhoc101@gmail.com', 'hung@gmail.com', '3baaa792aa3eec25897a6a84cf8b30a096990336', NULL, '1.jpeg', 1, '2018-04-07', 53432131, 'THPT Ninh Giang', 50000, '11', 'ko co11', 10, 1, 1, '3baaa792aa3eec25897a6a84cf8b30a096990336'),
+(39, 'a tien', 'atieng@gmail.com', 'atieng@gmail.com', '3baaa792aa3eec25897a6a84cf8b30a096990336', NULL, 'JobManager.png', 1, '2018-04-06', 1323465798, 'THPT Ninh Giang', 1, '11', 'ko co11', 10, 1, 1, '3baaa792aa3eec25897a6a84cf8b30a096990336'),
+(40, 'hung', 'hunghamhoc1011111@gmail.com', 'hung@gmail.com', '3baaa792aa3eec25897a6a84cf8b30a096990336', NULL, 'marketing-2-cm-.jpg', 1, '2018-04-13', 53432131, '11', 5000000, '11', 'china', 1, 2, 1, '3baaa792aa3eec25897a6a84cf8b30a096990336'),
+(41, 'hung', '11@gmail.com', 'hung@gmail.com', 'd76f6db52214ddbbe92add7d5877fa9d1be39a71', NULL, 'team.png', 1, '2018-04-12', 111, 'THPT Ninh Giang', 50000, '2', 'china', 10, 1, 1, 'd76f6db52214ddbbe92add7d5877fa9d1be39a71'),
+(42, 'hung', 'hunghamhoc101111@gmail.com', 'hung@gmail.com', '3baaa792aa3eec25897a6a84cf8b30a096990336', NULL, 'ĐBQHCK.jpg', 1, '2018-04-05', 53432131, 'THPT Ninh Giang', 5000000, '1', 'ko co11', 10, 2, 1, '3baaa792aa3eec25897a6a84cf8b30a096990336'),
+(43, 'hung', 'hunghamhoc10111111111@gmail.com', 'hung@gmail.com', '715e4a633a340a9c4c1f8c53399d05c0f3a434b6', NULL, 'web.jpg', 1, '2018-04-06', 53432131, 'THPT Ninh Giang', 5000000, '11', 'ko co11', 1111, 1, 1, '715e4a633a340a9c4c1f8c53399d05c0f3a434b6'),
+(45, 'hung', 'hunghamhoc11117101@gmail.com', 'hung@gmail.com', '356a192b7913b04c54574d18c28d46e6395428ab', NULL, 'kehoach.jpeg', 1, '2018-04-06', 53432131, 'THPT Ninh Giang', 1, '11', 'ko co11', 10, 1, 1, '356a192b7913b04c54574d18c28d46e6395428ab');
 
 --
 -- Indexes for dumped tables
@@ -111,12 +108,12 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

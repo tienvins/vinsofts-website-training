@@ -13,6 +13,7 @@
 
               <?php
                 foreach ($data as $key => $value) {
+//                    var_dump($data['confirm_password']);die;
                 ?>
                     <div class='col-sm-12 row_edit'>
                                 <div class='col-sm-12 form_user' style="color: #640c23;font-size: 20px;margin-bottom: 12px">User : <?= $value['name'] ?></div>
@@ -36,8 +37,13 @@
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Password</div>
-                        <input class='col-sm-4' name='password' value='<?= $value['password'] ?>'>
+                        <input class='col-sm-4' type="password" name='password' value='<?= $value['password'] ?>'>
                         <div class="prd" id="error-password"></div>
+                    </div>
+                    <div class='col-sm-12 row_edit'>
+                        <div class='col-sm-1'>Confirm password</div>
+                        <input class='col-sm-4' type="password" name='confirm_password' value='<?= $value['confirm_password'] ?>'>
+                        <div class="prd" id="error-confirm-password"></div>
                     </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Image</div>

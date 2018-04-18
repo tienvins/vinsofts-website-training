@@ -53,11 +53,20 @@ class IndexModel extends DB
 //        var_dump($result);die;
         return $result;
     }
+    public function CheckEmail($email)
+    {
+//        var_dump($id['id']);die;
+        $query = 'SELECT * FROM users where email = "'.$email.'"';
+        $result = $this->executeQuery($query);
+//        var_dump($result);die;
+        return $result;
+    }
     public function UpdateUserModel($id)
     {
-//        var_dump($id['name']);die;
-        $query = 'UPDATE users set name = "'.$id['name'].'" , email = "'.$id['email'].'" , gender = "'.$id['gender'].'" , date_of_birth = "'.$id['date_of_birth'].'", phone_number = "'.$id['phone_number'].'", current_address = "'.$id['current_address'].'" , leave_days = "'.$id['leave_days'].'", team_id = "'.$id['team_id'].'", status = "'.$id['status'].'", language_skills = "'.$id['language_skills'].'", hobby = "'.$id['hobby'].'",salary = "'.$id['salary'].'" where id='.$id['id'].'';
+//        var_dump($id['confirm_password']);die;
+        $query = 'UPDATE users set name = "'.$id['name'].'" ,confirm_password = "'. sha1($id["confirm_password"]) .'",password = "'. sha1($id["password"]) .'", email_personal = "'.$id['email_personal'].'"  , email = "'.$id['email'].'" , gender = "'.$id['gender'].'" , date_of_birth = "'.$id['date_of_birth'].'", phone_number = "'.$id['phone_number'].'", current_address = "'.$id['current_address'].'" , leave_days = "'.$id['leave_days'].'", team_id = "'.$id['team_id'].'", status = "'.$id['status'].'", language_skills = "'.$id['language_skills'].'", hobby = "'.$id['hobby'].'",salary = "'.$id['salary'].'" where id='.$id['id'].'';
         $result = $this->updateQuery($query);
+//        var_dump($query);die;
         return $result;
     }
 
@@ -65,23 +74,25 @@ class IndexModel extends DB
     {
 //        var_dump($data['fileToUpload']['name']);die;
 //        var_dump($id['name']);die;
-        $query = 'UPDATE users set image = "'.$data['fileToUpload']['name'].'", name = "'.$id['name'].'" , email = "'.$id['email'].'" , gender = "'.$id['gender'].'" , date_of_birth = "'.$id['date_of_birth'].'", phone_number = "'.$id['phone_number'].'", current_address = "'.$id['current_address'].'" , leave_days = "'.$id['leave_days'].'", team_id = "'.$id['team_id'].'", status = "'.$id['status'].'", language_skills = "'.$id['language_skills'].'", hobby = "'.$id['hobby'].'",salary = "'.$id['salary'].'" where id='.$id['id'].'';
+        $query = 'UPDATE users set image = "'.$data['fileToUpload']['name'].'",confirm_password = "'. sha1($data["confirm_password"]) .'", password = "'. sha1($data["password"]) .'",name = "'.$id['name'].'" , email = "'.$id['email'].'" , gender = "'.$id['gender'].'" , date_of_birth = "'.$id['date_of_birth'].'", phone_number = "'.$id['phone_number'].'", current_address = "'.$id['current_address'].'" , leave_days = "'.$id['leave_days'].'", team_id = "'.$id['team_id'].'", status = "'.$id['status'].'", language_skills = "'.$id['language_skills'].'", hobby = "'.$id['hobby'].'",salary = "'.$id['salary'].'" where id='.$id['id'].'';
         $result = $this->updateQuery($query);
-        var_dump($query);die;
+
+//        var_dump($query);die;
         return $result;
     }
     public function insertUserModel($data){
-//        var_dump($data);die;
-            $query = 'INSERT INTO `users`(`name`, `email`, `password`,`email_personal`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `leave_days`,`team_id`,`status`,`language_skills`,`hobby`,`salary`)
-                   VALUE ("' . $data["name"] . '", "' . $data["email"] . '","' . sha1($data["password"]) . '", "' . $data["email_personal"] . '", "' . $data["gender"] . '", "' . $data["date_of_birth"] . '", "' . $data["phone_number"] . '", "' . $data["current_address"] . '", "' . $data["leave_days"] . '", "' . $data["team_id"] . '", "' . $data["status"] . '", "' . $data["language_skills"] . '", "' . $data["hobby"] . '", "' . $data["salary"] . '")';
+        var_dump($data);die;
+            $query = 'INSERT INTO `users`(`name`, `email`, `confirm_password`,`password`,`email_personal`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `leave_days`,`team_id`,`status`,`language_skills`,`hobby`,`salary`)
+                   VALUE ("' . $data["name"] . '", "' . $data["email"] . '","' . sha1($data["confirm-password"]) . '","' . sha1($data["password"]) . '", "' . $data["email_personal"] . '", "' . $data["gender"] . '", "' . $data["date_of_birth"] . '", "' . $data["phone_number"] . '", "' . $data["current_address"] . '", "' . $data["leave_days"] . '", "' . $data["team_id"] . '", "' . $data["status"] . '", "' . $data["language_skills"] . '", "' . $data["hobby"] . '", "' . $data["salary"] . '")';
+//            var_dump($query);die;
             $result = $this->insertNew($query);
             return $result;
     }
     public function insertUser($data, $a){
 //var_dump($data['gender']);die;
 //        var_dump($a['fileToUpload']['name']);die;
-        $query = 'INSERT INTO `users`(`name`, `email`, `password`,`email_personal`,`image`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `leave_days`,`team_id`,`status`,`language_skills`,`hobby`,`salary`)
-                   VALUE ("' . $data["name"] . '", "' . $data["email"] . '","' . sha1($data["password"]) . '", "' . $data["email_personal"] . '","' . $a['fileToUpload']['name'] . '", "' . $data["gender"] . '", "' . $data["date_of_birth"] . '", "' . $data["phone_number"] . '", "' . $data["current_address"] . '", "' . $data["leave_days"] . '", "' . $data["team_id"] . '", "' . $data["status"] . '", "' . $data["language_skills"] . '", "' . $data["hobby"] . '", "' . $data["salary"] . '")';
+        $query = 'INSERT INTO `users`(`name`, `email`,`confirm_password`, `password`,`email_personal`,`image`, `gender`, `date_of_birth`, `phone_number`, `current_address`, `leave_days`,`team_id`,`status`,`language_skills`,`hobby`,`salary`)
+                   VALUE ("' . $data["name"] . '", "' . $data["email"] . '","' . sha1($data["confirm-password"]) . '","' . sha1($data["password"]) . '", "' . $data["email_personal"] . '","' . $a['fileToUpload']['name'] . '", "' . $data["gender"] . '", "' . $data["date_of_birth"] . '", "' . $data["phone_number"] . '", "' . $data["current_address"] . '", "' . $data["leave_days"] . '", "' . $data["team_id"] . '", "' . $data["status"] . '", "' . $data["language_skills"] . '", "' . $data["hobby"] . '", "' . $data["salary"] . '")';
 //        var_dump($query);die;
         $result = $this->insertNew($query);
 

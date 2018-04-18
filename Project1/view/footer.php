@@ -48,7 +48,7 @@
 
 <!-- Custom Theme Scripts -->
 <script src="../js/custom.min.js"></script>
-<script src="../js/check_input.js"></script>
+
 
 </body>
 </html>

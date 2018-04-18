@@ -1,3 +1,6 @@
+.col-sm-2 {
+    overflow: hidden;
+}
 .box-shadow {
     position: relative;
     -moz-box-shadow: 1px 2px 4px rgba(0, 0, 0,0.5);
@@ -39,6 +42,7 @@
 }
 .prd {
     color: #a40835;
+    padding-left: 200px;
 }
 .list-user {
     margin-top: 5px;
