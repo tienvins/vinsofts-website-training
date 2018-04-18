@@ -1,1 +1,0 @@
-# vinsofts-website-training
