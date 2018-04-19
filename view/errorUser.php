@@ -42,7 +42,7 @@
                             </div>
                     <div class='col-sm-12 row_edit'>
                         <div class='col-sm-1'>Image</div>
-                        <img class='col-sm-2' src='../images/<?php if (!isset($_SESSION['image']['name'])){echo $_SESSION['image']['name'];} ?>' style='width: 60px'>
+                        <img class='col-sm-2' src='../images/<?php if (!isset($_SESSION['image']['name'])){echo $_SESSION['image']['name'];} else { echo 'user.png'; }?>' style='width: 60px'>
                         <input type="hidden" class='col-sm-1' value='<?php echo $_SESSION['input']['image']?>'>
                         <input class='col-sm-2' type='file' name ='fileToUpload'>
                         <div class="prd col-sm-6" id="error-image"><?php echo $error2['image']?></div>

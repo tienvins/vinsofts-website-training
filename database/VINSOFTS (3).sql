@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 18, 2018 at 06:23 PM
+-- Generation Time: Apr 19, 2018 at 11:07 AM
 -- Server version: 5.7.21-0ubuntu0.16.04.1
 -- PHP Version: 7.2.4-1+ubuntu16.04.1+deb.sury.org+1
 
@@ -42,7 +42,8 @@ INSERT INTO `teams` (`id`, `name`, `description`, `logo`) VALUES
 (2, 'Marketing', 'Hoạt động hướng tới khách hàng nhằm thỏa mãn nhu cầu và mong muốn của họ thông qua quá trình tiếp thị sản phẩm, phát triển thương hiệu', 'marketing.png'),
 (3, 'Job Manager', 'Khai thác và sử dụng nguồn nhân lực của một tổ chức hay một công ty một cách hợp lý và hiệu quả', 'JobManager.png'),
 (5, 'Accounting', 'Xác định, ghi chép, tổng hợp và báo cáo các thông tin kinh tế trong công ty.', 'ketoan.png'),
-(6, 'Web', 'Tạo các ứng dụng trên web', 'web.jpg');
+(6, 'Web10', 'Tạo các ứng dụng vào thiết kế các phần mềm chạy trên máy tính', 'web.jpg'),
+(7, 'Mobie2', 'Thiết kế các ứng dụng trên điện thoại', 'bennerteam.png');
 
 -- --------------------------------------------------------
 
@@ -106,7 +107,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `teams`
 --
 ALTER TABLE `teams`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `users`
 --

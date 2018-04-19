@@ -75,7 +75,8 @@ class TeamControllers {
             require_once '../view/team/team.php';
         }
         else {
-            echo "chua the tao";
+
+            require_once '../view/addnewteam.php';
         }
     }
     public function DeleteByIdAction($id) {

@@ -55,7 +55,7 @@ class IndexControllers {
                    $_SESSION['input'] = $data;
 //                   var_dump($error);die;
 //            var_dump($_SESSION['input']);die;
-                   require_once '../view/r.php';
+                   require_once '../view/errorUser.php';
                }
                if($error2 == '')
                {
@@ -75,7 +75,7 @@ class IndexControllers {
 //            var_dump( $_SESSION['image']['name']);die;
 
 //            var_dump($_SESSION['input']);die;
-            require_once '../view/r.php';
+            require_once '../view/errorUser.php';
         }
 
 

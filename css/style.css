@@ -39,6 +39,9 @@
 }
 .form_user {
     color: #640c23;
+    font-size: 20px;
+    margin-bottom: 30px;
+    text-align: center;
 }
 .prd {
     color: #a40835;

@@ -72,7 +72,7 @@
                           </div>
                           <div class='col-sm-12 row_edit'>
                                 <div class='col-sm-1'>Leave_days</div>
-                                <input class='col-sm-4' name= 'leave_days' value=''>
+                                <input class='col-sm-4' type="number" name= 'leave_days' value=''>
 
                           </div>
                           <div class='col-sm-12 row_edit'>
@@ -81,7 +81,7 @@
                           </div>
                           <div class='col-sm-12 row_edit fm-stt'>
                                 <div class='col-sm-1'>Status</div>
-                              <div class="col-sm-2">
+                              <div class="col-sm-3">
                                     <input name = 'status' type='radio' value='1'  >
                                     <label>Đang làm </label>
                                     <input name = 'status' type='radio' value='2'  style='margin-left: 20px'>
