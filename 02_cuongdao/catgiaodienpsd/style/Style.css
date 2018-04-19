@@ -1,0 +1,45 @@
+
+.anh span{font-size: 11.86pt;
+color: #7c767e;}
+.but button{background: #00a2ed;
+		color: #ffffff;
+		border-radius: 5px;
+		width: 115px;
+		height: 25px;
+		font-size: 9.86pt;}
+hr{width: 300px;
+	margin-top: -18px;
+background: red;}	
+.picture{width:960px;
+		height: 110px; 
+	display: inline-table;
+	text-align: center;
+	margin:40px 0 40px 0;
+	}	
+.pic1, .pic2, .pic3, .pic4, .pic5{width: 20%;
+height: 110px;}	
+.pic1, .pic2, .pic3, .pic4{float: left;}
+.pic5{float: right;}
+#footer{width: 960px;
+		height: 400px;
+		background: #323232;
+		text-align: center;}
+.about, .contact, .info{height: 400px;
+						width:320px;}	
+.about, .contact{float: left;}
+.info{float: right;}
+.about p, .contact p, .info p{margin-bottom: 27px;
+							 color: #ffffff; 
+							 font-size:14.86pt; }
+.about span, .info span{color: #ffffff;
+			font-size: 10.86pt;}
+	
+label{text-align: left;}		
+.name2{display: inline-table;}	
+.name1{display: inline-table;}
+td span{color:red;}
+
+							
+
+																 		
+							

@@ -1,0 +1,64 @@
+@media only screen and (min-width: 320px) and (max-width: 750px) {
+	.address{
+		display: none;
+	}
+	.banner{
+		display: none;
+	}
+	.menu-icon{
+		display: none;
+	}
+	.img{
+		padding-left: 0px;
+	}
+}
+@media only screen and (min-width: 750px) and (max-width: 768px) {
+	.menu-icon{
+		display: none;
+	}
+	.img{
+		padding-left: 75px;
+	}
+}
+.logo{
+	text-align: center;
+}
+.address{
+	width: 500px;
+	height: 14px;
+	float:right;
+	margin-top: 20px;
+	margin-right: 19px;
+	color: #838383;
+	font-size: 11px;
+}
+.skype{
+	float: right;
+	width: 28%;
+}
+.gmail{
+	float: right;
+	width: 33%;
+}
+.hotline{
+	float: right;
+	width: 25%;
+}
+
+.menu-icon ul li{
+	display: inline-block;
+	padding: 4px 3px;
+}
+.navbar-default .navbar-nav>li>a {
+	color: #939393;
+	padding: 10px 15px;
+}
+.navbar-default .navbar-nav>li>a:hover {
+	border-radius: 10px;
+	background: #00a2ed;
+	color: #ffffff;
+}
+.navbar-nav a{
+	color: #939393;
+	font-weight: bold;
+}

@@ -1,0 +1,65 @@
+
+ .buton button{background: #00a2ed;
+		color: #ffffff;
+		border-radius: 5px;
+		width: 115px;
+		height: 25px;
+		font-size: 9.86pt;}
+hr{width: 356px;
+background: red;}
+.hr{margin-top: 5px;}
+#picture{margin-bottom: 5px;
+			margin-left: 515px;
+				overflow: hidden;
+				width: 150px;
+				height: 150px;}
+#picture img{width: 99px;
+				height: 99px;}				
+			
+.mySlides {display:none;
+			text-align: center}
+
+
+#footer{background: #323232;
+		text-align: center;}		
+#about, #contact, #info{height: 400px;}	
+#about p, #contact p, #info p{margin-bottom: 27px;
+							 color: #ffffff; 
+							 font-size:14.86pt;
+							 text-align: left; }
+.text{text-align: left;}							 
+.text span, #info span{color: #ffffff;
+			font-size: 10.86pt;}
+	
+label{text-align: left;
+color: #fff;}		
+.name2{display: inline-table;}	
+.name1{display: inline-table;}
+td span{color:red;}
+@media only screen and (max-width: 600px) {
+	#menutitle{display: none;}
+	#myCarousel{display: none;}
+	.textin{text-align: center;
+			height: 100px;}
+	.textip{text-align: center;
+				font-size: 15px;}
+	#anh{text-align: center;}
+	#footer{height: 1000px;
+				}
+	#content{height: 1950px;
+			overflow: hidden;}
+	#menu{margin-left:0; }
+	.a a{display: none;}
+	#menu ul li{float: none;
+				padding:  15px 10px 5px 10px;}
+
+	#logo{text-align: center;}
+	hr{display: none;}
+	#footer #about{height: 200px;}
+	 }
+ @media only screen and (max-width: 900px) and (min-width: 600px){
+  	#myCarousel{display: none;}
+
+  
+
+	
