@@ -12,5 +12,20 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('master');
 });
+Route::get('/myRoute',function(){
+    echo "Hello";
+});
+Route::get('/g-laravel',function(){
+    echo "G-Laravel";
+});
+Route::get('themSP', function(){
+  $sanpham = new App\SanPham();
+  $sanpham->tenSP = "San Pham 1";
+  $sanpham->hinhSP = "abc";
+  $sanpham->gia = 1000;
+  $sanpham->save();
+  echo "Da them SP";
+});
+Route::resource('SanPham','ControllerSanPham');
