@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Products;
 
-class ControllerSanPham extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,8 @@ class ControllerSanPham extends Controller
      */
     public function index()
     {
-        return view('master');
+        $products = Products::get();
+        return view('products/list-products', compact('products'));
     }
 
     /**
@@ -24,7 +26,6 @@ class ControllerSanPham extends Controller
     public function create()
     {
         //
-        echo "create";
     }
 
     /**
@@ -36,8 +37,6 @@ class ControllerSanPham extends Controller
     public function store(Request $request)
     {
         //
-        echo "store";
-
     }
 
     /**
@@ -49,7 +48,6 @@ class ControllerSanPham extends Controller
     public function show($id)
     {
         //
-        echo "show";
     }
 
     /**
@@ -61,7 +59,6 @@ class ControllerSanPham extends Controller
     public function edit($id)
     {
         //
-        echo "edit";
     }
 
     /**
@@ -74,7 +71,6 @@ class ControllerSanPham extends Controller
     public function update(Request $request, $id)
     {
         //
-        echo "update";
     }
 
     /**
@@ -86,6 +82,5 @@ class ControllerSanPham extends Controller
     public function destroy($id)
     {
         //
-        echo "distroy";
     }
 }
